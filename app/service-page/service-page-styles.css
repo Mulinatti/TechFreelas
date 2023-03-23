@@ -1,0 +1,83 @@
+/*  CSS em estágio de prototipação, 
+    muito ainda precisa ser refeito e
+    refatorado.    
+*/
+
+* {
+    background-color: #efefef;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.photo img {
+    border-radius: 5%;
+}
+
+.info-product {
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 16px;
+    justify-content:space-evenly;
+}
+
+.buying-info button {
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.specifications {
+    display: flex;
+    justify-content: center;
+}
+
+.specifications .details {
+    width: 100vh;
+}
+
+.specifications .details caption {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.specifications .details tbody tr th {
+    background-color: bisque;
+}
+
+.specifications .details tbody tr td {
+    background-color: azure;
+}
+
+.reviews .name {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.reviews .name img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.reviews .name p {
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.reviews .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews .text p {
+    font-size: 14px;
+
+}
