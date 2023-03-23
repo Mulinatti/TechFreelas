@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFreelas | Entre na sua conta</title>
+    <script src="https://kit.fontawesome.com/8ad2738107.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <section class="section-login"> 
+            <h2>Login</h2>
+            <form action="submit" method="get">
+                <fieldset>
+                    <div class="section-login__dados">
+                        <label for="loginEmail">E-Mail</label>
+                        <input type="email" name="loginEmail" id="loginEmail">
+                        <label for="loginSenha">Senha</label>
+                        <input type="password" name="loginSenha" id="loginSenha">
+                    </div>
+                    <button>Entrar</button>
+                </fieldset>
+            </form>
+        </section>
+        <section class="section-cadastro">
+            <h2>Cadastre-se</h2>
+            <form action="submit" method="get">
+                <fieldset>
+                    <div class="section-cadastro__nome-sobrenome">
+                        <div>
+                            <label for="nome">Nome</label>
+                            <input id="nome" name="nome" type="text">
+                        </div>
+                        <div>
+                            <label for="sobrenome">Sobrenome</label>
+                            <input id="sobrenome" name="sobrenome" type="text">
+                        </div>
+                    </div>
+                    <div class="section-cadastro__cpf">
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" name="cpf" type="text">
+                    </div>
+                    <div class="section-cadastro__email">
+                        <label for="email">E-Mail</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="section-cadastro__data-nascimento">
+                        <label for="birthDate">Data de nascimento</label>
+                        <input type="date" name="birthDate" id="birthDate">
+                    </div>
+                    <div class="section-cadastro__senha">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha">
+                        <label for="confSenha">Confirmar senha</label>
+                        <input type="password" name="confSenha" id="confSenha">
+                    </div>
+                    <div>
+                        <button>Cadastrar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
