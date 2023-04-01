@@ -13,7 +13,7 @@
     border-radius: 5%;
 }
 
-.info-product {
+.info-service {
     display: flex;
     flex-direction: row;
     font-family: sans-serif;
@@ -22,7 +22,7 @@
     justify-content:space-evenly;
 }
 
-.buying-info button {
+.contracting-info button {
     font-size: 16px;
     width: 200px;
     height: 50px;
@@ -80,4 +80,15 @@
 .reviews .text p {
     font-size: 14px;
 
+}
+
+.send-review {
+    display: flex;
+    flex-direction: column;
+}
+
+#send-review-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
