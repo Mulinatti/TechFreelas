@@ -1,0 +1,23 @@
+{
+  "name": "projeto-faculdade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./app/tailwindCSS/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mulinatti/TechFreelas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mulinatti/TechFreelas/issues"
+  },
+  "homepage": "https://github.com/Mulinatti/TechFreelas#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
+  }
+}
