@@ -3,7 +3,7 @@ module.exports = {
   content: ["./app/**/*.{html,js}"],
   theme: {
     fontFamily: {
-      "urbanist": "Urbanist, sans-serif"
+      "inter": "Inter, sans-serif"
     },
     extend: {
       colors: {
@@ -19,6 +19,9 @@ module.exports = {
       },
       gridTemplateRows: {
         "body-rows": "auto 100vh auto",
+      },
+      boxShadow: {
+        "md": "1px 1px 15px #00000085",
       }
     },
   },

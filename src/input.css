@@ -4,9 +4,9 @@
 
 @layer components {
     .header {
-        @apply bg-transparent flex justify-between py-2 px-5 items-center backdrop-blur-lg sticky top-0 z-50 border-b border-slate-50/10;
+        @apply bg-oxford-blue/70 flex justify-between py-2 px-5 items-center backdrop-blur-lg sticky top-0 z-50 border-b border-slate-50/10;
     }
     .button {
-        @apply bg-risd px-2 py-3 block rounded-lg hover:bg-blue-600;
+        @apply bg-blue-600 px-2 py-3 block rounded-lg hover:bg-blue-900 cursor-pointer;
     }
 }

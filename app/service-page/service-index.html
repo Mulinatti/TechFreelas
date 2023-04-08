@@ -6,20 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../tailwindCSS/tailwind.css">
     <script src="https://kit.fontawesome.com/8ad2738107.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Página do Produto</title>
 </head>
-<body class="bg-oxford-blue text-white">
+<body class="bg-oxford-blue text-slate-200 font-inter">
     <header class="header">
         <figure class="w-14 flex items-center text-2xl">
             <img src="../../src/imgs/logo.svg" alt="">
             <figcaption class="font-semibold">TechFreelas</figcaption>
         </figure>
         <form class="w-1/3 flex justify-center" action="submit" method="get">
-            <input class="text-slate-400 shadow-md border-l border-y border-white/10 w-full outline-none py-1 px-2 text-lg font-medium bg-slate-600/10 placeholder-white/10 rounded-l-xl" id="search" type="text" placeholder="Busque aqui..." name="searchBar">
-            <button class="bg-slate-600/30 text-white/40 px-3 rounded-r-xl border-r border-y border-white/10 shadow-md"><i class="fa-solid fa-search"></i></button>
+            <input class="text-slate-400 shadow-lg border-l border-y border-white/10 w-full outline-none py-1 px-2 text-lg font-medium bg-slate-600/10 placeholder-white/10 rounded-l-xl" id="search" type="text" placeholder="Busque aqui..." name="searchBar">
+            <button class="bg-slate-600/30 text-white/40 px-3 rounded-r-xl border-r border-y border-white/10 shadow-lg"><i class="fa-solid fa-search"></i></button>
         </form>
         <div class="flex w-1/6 justify-between text-slate-400">
-            <div class="text-lg flex justify-between">
+            <div class="text-base flex justify-between">
                 <a class="border-r border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/sign.html">Entrar</a>
                 <a class="px-2 hover:text-slate-100" href="../sign-page/sign.html">Cadastrar</a>
             </div>
@@ -29,35 +32,34 @@
         </div>
     </header>
     <!-- Tudo se trata de um programa -->
-    <main>
-        <section class="p-8">
-            <div class="bg-box-blue rounded-3xl flex justify-evenly p-8">
-                <div class="flex justify-center items-center">
-                    <figure class="w-full">
-                        <img class="rounded-2xl shadow-lg" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages2.alphacoders.com%2F243%2F243340.jpg&f=1&nofb=1&ipt=18cfb63b594ccc230affeafac77be704f691f2e585c8dd07e2dcea24d9ffbfd2&ipo=images" 
-                        alt="Pessoa jogando minecraft" style="width: 500px;">
+    <main class="p-8">
+        <section>
+            <div class="flex justify-evenly items-start">
+                <div class="w-[45%] flex justify-center items-center">
+                    <figure>
+                        <img class="rounded-2xl shadow-md" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages2.alphacoders.com%2F243%2F243340.jpg&f=1&nofb=1&ipt=18cfb63b594ccc230affeafac77be704f691f2e585c8dd07e2dcea24d9ffbfd2&ipo=images" 
+                        alt="Pessoa jogando minecraft">
                     </figure>
                 </div>
-                
-                <div class="bg-oxford-blue w-2/5 flex flex-col justify-between p-5 rounded-2xl h-72 shadow-lg">
+                <div class=" w-[45%] flex flex-col rounded-2xl">
                     <div>
                         <div class="flex justify-between items-center">
-                            <p class="text-3xl font-bold">Gustavo Muniz Martins</p>
-                            <p class="text-blue-600 text-lg font-semibold">Desenvolvedor</p>
+                            <p class="text-3xl font-bold w-3/4">Gustavo Muniz Martins</p>
+                            <p class="text-blue-600 text-lg font-semibold w-1/3 flex justify-end">Desenvolvedor</p>
                         </div>
-                        <p class="mt-4">
+                        <p class="mt-4 text-slate-400">
                             Waodsosams skam skdalskmk odksaml lskml sdl cae skm oam oo wondsklnskdnlaskn aodiqowiksndknk saoojw.
                             slkjdaosjdoiwjo ijsmadl maskldmsldkm oqdjpomdlasmdlm lowopkdposakdposkapdk klsmdlksm qok opkdpasd
                             dsoadjoi jcabdsdskj padksopk cabeçada no teclado.
                         </p>
                     </div>
-                    <hr class="border-b border-white/20">
+                    <hr class="border-white/10 my-5">
                     <div class="flex justify-between items-center">
                         <div class="flex">
                             <a class="button mr-3">Adicionar à lista</a>
                             <a class="button">Contratar</a>
                         </div>
-                        <p class="text-2xl font-semibold">R$ 10.023,57/h</p>
+                        <p class="text-2xl font-semibold">R$ 23,57/h</p>
                     </div>
                 </div>
             </div>
