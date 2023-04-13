@@ -98,19 +98,27 @@
                 </table>
             </div>
         </section>
-
+        <!-- Dividindo tudo em div... -->
+        <!-- POSSIBILIDADES: -->
+        <!-- Cada avaliação é um bloco, as principais estão um ao lado da outra -->
+        <!-- Futuro: Adicionar um sistema de avaliação por estrelas (a considerar) -->
+        <!-- Futuro: Adicionar um <aside> à esquerda para o quantidade média de estrelas dada pelos clientes (a considerar) -->
         <section class="p-8">
-            <div class="reviews">
-                <h1>Avaliações de clientes</h1>
-                <div class="name">
-                    <img src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                    alt="Cachorrinho">
-                    <p>Cachorrinho</p>
-                </div>
-                <div class="text">
-                    <p>Gostei muito, ele é muito educado e prestativo. Foi uma gameplay agradável!</p>
+            <div class="flex flex-col justify-between items-center">
+                <h1 class="text-3xl font-bold">Avaliações de clientes</h1>
+                <div class="w-full flex flex-col float-left">
+                    <figure>
+                        <img class="rounded-2xl shadow-md w-10 h-10" src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                        alt="Cachorrinho">
+                    </figure>
+                        <p class="text-lg font-semibold w-1/3 flex justify-start">Cachorrinho</p>
+                    <div>
+                        <p class="mt-4 text-slate-400">Gostei muito, ele é muito educado e prestativo. Foi uma gameplay agradável!</p>
+                    </div>
                 </div>
             </div>
+        </section>
+        <section class="p-8">
             <div class="send-review">
                 <form action="" id="send-review-form">
                     <label for="review">Dê sua opinião: </label>
