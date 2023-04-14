@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>Página do Produto</title>
+    <title>Página do Serviço</title>
 </head>
+
 <body class="bg-oxford-blue text-slate-200 font-inter">
     <header class="header">
         <figure class="w-14 flex items-center text-2xl">
@@ -31,9 +32,9 @@
             </a>
         </div>
     </header>
-    <!-- Tudo se trata de um programa -->
-    <main class="p-8">
-        <section>
+
+    <main>
+        <section class="p-8">
             <div class="flex justify-evenly items-start">
                 <div class="w-[45%] flex justify-center items-center">
                     <figure>
@@ -41,6 +42,7 @@
                         alt="Pessoa jogando minecraft">
                     </figure>
                 </div>
+
                 <div class=" w-[45%] flex flex-col rounded-2xl">
                     <div>
                         <div class="flex justify-between items-center">
@@ -54,6 +56,7 @@
                         </p>
                     </div>
                     <hr class="border-white/10 my-5">
+
                     <div class="flex justify-between items-center">
                         <div class="flex">
                             <a class="button mr-3">Adicionar à lista</a>
@@ -65,52 +68,71 @@
             </div>
         </section>
         
-        <div class="specifications">
-            <!-- Todos os atributos ainda serão discutidos... -->
-            <table class="details" border="0">
-                <caption>Detalhes sobre o prestador do serviço</caption>
-                <tbody>
-                    <tr>
-                        <th>Nome</th>
-                        <td>PLACEHOLDER</td>
-                    </tr>
-                    <tr>
-                        <th>Altura</th>
-                        <td>PLACEHOLDER</td>
-                    </tr>
-                    <tr>
-                        <th>Tempo na plataforma</th>
-                        <td>5 anos</td>
-                    </tr>
-                    <tr>
-                        <th>Idade</th>
-                        <td>25 anos</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="reviews">
-            <h1>Avaliações de clientes</h1>
-            <div class="name">
-                <img src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                alt="Cachorrinho">
-                <p>Cachorrinho</p>
+        <section class="p-8">
+            <div class="flex flex-col justifly-center items-center w-screen">
+                <!-- Todos os atributos ainda serão discutidos... -->
+                <table class="w-full border-separate border-spacing-2">
+                    <caption class="table-caption text-3xl font-bold">Detalhes sobre o prestador do serviço</caption>
+                    <tbody>
+                        <tr class="table-row">
+                            <th class="text-xl font-semibold border border-white/10">Nome</th>
+                            <td class="text-xl font-medium border border-white/10">Gustavo</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="text-xl font-semibold border border-white/10">Tempo na plataforma</th>
+                            <td class="text-xl font-medium border border-white/10">5 anos</td>
+                        </tr>
+                        <tr class="table-row">
+                            <th class="text-xl font-semibold border border-white/10">Idade</th>
+                            <td class="text-xl font-medium border border-white/10">25 anos</td>
+                        </tr>
+                        <tr>
+                            <th class="text-xl font-semibold border border-white/10">País</th>
+                            <td class="text-xl font-medium border border-white/10">Brasil</td>
+                        </tr>
+                        <tr>
+                            <th class="text-xl font-semibold border border-white/10">Email</th>
+                            <td class="text-xl font-medium border border-white/10">cabecadanoteclado@umemail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="text">
-                <p>Gostei muito, ele é muito educado e prestativo. Foi uma gameplay agradável!</p>
+        </section>
+        <!-- Dividindo tudo em div... -->
+        <!-- POSSIBILIDADES: -->
+        <!-- Cada avaliação é um bloco, as principais estão um ao lado da outra -->
+        <!-- Futuro: Adicionar um sistema de avaliação por estrelas (a considerar) -->
+        <!-- Futuro: Adicionar um <aside> à esquerda para o quantidade média de estrelas dada pelos clientes (a considerar) -->
+        <section class="p-8">
+            <div class="flex flex-col justify-between items-center">
+                <h1 class="text-3xl font-bold">Avaliações de clientes</h1>
+                <div class="w-full flex flex-col float-left">
+                    <figure>
+                        <img class="rounded-2xl shadow-md w-10 h-10" src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                        alt="Cachorrinho">
+                    </figure>
+                        <p class="text-lg font-semibold w-1/3 flex justify-start">Cachorrinho</p>
+                    <div>
+                        <p class="mt-4 text-slate-400">Gostei muito, ele é muito educado e prestativo. Foi uma gameplay agradável!</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="send-review">
-            <form action="" id="send-review-form">
-                <label for="review">Dê sua opinião: </label>
+        </section>
+        <section class="p-8">
+            <div class="send-review">
+                <form action="" id="send-review-form">
+                    <label for="review">Dê sua opinião: </label>
 
-                <textarea name="review" id="review" cols="70" rows="7"></textarea>
-                <input class="button" type="submit" value="Enviar">
-            </form>
-        </div>
+                    <textarea name="review" id="review" cols="70" rows="7"></textarea>
+                    <input class="button" type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
     </main>
+
     <footer>
         <h1>RODAPÉ</h1>
     </footer>
+
 </body>
 </html>
