@@ -112,34 +112,37 @@
         <!-- Cada avaliação é um bloco, as principais estão um ao lado da outra -->
         <!-- Futuro: Adicionar um sistema de avaliação por estrelas (a considerar) -->
         <!-- Futuro: Adicionar um <aside> à esquerda para o quantidade média de estrelas dada pelos clientes (a considerar) -->
+        <!-- Necessita ser refatorado -->
         <section class="p-8">
-            <div class="flex flex-col justify-between items-center">
-                <h1 class="text-3xl font-bold">Avaliações de clientes</h1>
-                <div class="w-full flex flex-col float-left">
-                    <figure>
-                        <img class="rounded-2xl shadow-md w-10 h-10" src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                        alt="Cachorrinho">
-                    </figure>
-                        <p class="text-lg font-semibold w-1/3 flex justify-start">Cachorrinho</p>
-                    <div>
-                        <p class="mt-4 text-slate-400">Gostei muito, ele é muito educado e prestativo. Foi uma gameplay agradável!</p>
+            <div class="flex flex-col justify-around items-center">
+                <h1 class="text-3xl font-bold p-8">Avaliações de clientes</h1>
+                <div class="flex flex-col w-full items-start bg-white/50 p-3">
+                    <div class="flex flex-row justify-around items-center">
+                        <figure>
+                            <img class="rounded-2xl shadow-md w-10 h-10" src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                            alt="Cachorrinho">
+                        </figure>
+                            <p class="text-lg font-semibold pl-2">Cachorrinho</p>
                     </div>
+                    <p class="mt-4 text-slate-400">Gostei muito, ele é muito educado e prestativo. Foi uma gameplay agradável!</p>
                 </div>
             </div>
         </section>
+        <!-- A considerar o futuro dessa seção: ficará na página ou escondida atrás de um botão. -->
+        <!-- RODE npm run dev ANTES DE COMEÇAR!!! -->
         <section class="p-8">
-            <div class="send-review">
-                <form action="" id="send-review-form">
-                    <label for="review">Dê sua opinião: </label>
-
-                    <textarea name="review" id="review" cols="70" rows="7"></textarea>
-                    <input class="button" type="submit" value="Enviar">
-                </form>
-            </div>
+            <form action="" id="send-review-form">
+                <div class="flex flex-col w-full h-80 justify-around items-start">
+                    <label class="text-3xl font-bold" for="review">Dê sua opinião:</label>
+                    <textarea class="text-slate-400 bg-rich w-full rounded-2xl border border-slate-400/20" name="review" id="review" cols="70" rows="7"></textarea>
+                    <input class="button text-lg w-40" type="submit" value="Enviar">
+                </div>
+            </form>
         </section>
     </main>
 
-    <footer>
+    <!-- A decidir o conteúdo do rodapé -->
+    <footer class="p-8">
         <h1>RODAPÉ</h1>
     </footer>
 
