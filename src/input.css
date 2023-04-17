@@ -9,4 +9,13 @@
     .button {
         @apply bg-blue-600 px-2 py-3 block rounded-lg hover:bg-blue-900 cursor-pointer;
     }
+    .bodyPattern {
+        @apply bg-oxford-blue text-slate-200 font-inter overflow-x-hidden;
+    }
+    .categoryItem {
+        @apply flex justify-between items-center bg-slate-600/10 p-3 mb-3 rounded-xl border-l border-t border-slate-600/30 shadow-lg w-5/6;
+    }
+    .categoryIcon {
+        @apply text-base;
+    }
 }

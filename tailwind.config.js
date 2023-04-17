@@ -15,13 +15,24 @@ module.exports = {
         "slate-purple": "#6957B2",
       },
       gridTemplateColumns: {
-        "body-cols": "1fr",
+        "body-cols": "1fr 4fr",
       },
       gridTemplateRows: {
-        "body-rows": "auto 100vh auto",
+        "body-rows": "auto calc(100vh - 73px) auto",
       },
       boxShadow: {
         "md": "1px 1px 15px #00000085",
+      },
+      animation: {
+        navbar: "navbar 1s ease-in-out backwards"
+      },
+      keyframes: {
+        navbar: {
+          "0, 100%": {
+            position: "absolute",
+            left: "-100vw",
+          }
+        }
       }
     },
   },
