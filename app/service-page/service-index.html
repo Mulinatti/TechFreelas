@@ -127,19 +127,29 @@
                 </div>
             </div>
         </section>
+        <!-- A considerar o futuro dessa seção: ficará na página ou escondida atrás de um botão. -->
         <section class="p-8">
-            <div class="send-review">
-                <form action="" id="send-review-form">
-                    <label for="review">Dê sua opinião: </label>
+            <form action="" id="send-review-form">
+                <div class="flex flex-col w-full items-center">
+                    <div>
+                        <label class="text-3xl font-bold" for="review">Dê sua opinião: </label>
+                    </div>
 
-                    <textarea name="review" id="review" cols="70" rows="7"></textarea>
-                    <input class="button" type="submit" value="Enviar">
-                </form>
-            </div>
+                    <div class="flex flex-col items-center">
+                        <div class="p-8">
+                            <textarea class="text-slate-400" name="review" id="review" cols="70" rows="7"></textarea>
+                        </div>
+                        <div>
+                            <input class="button" type="submit" value="Enviar">
+                        </div>
+                    </div>
+                </div>
+            </form>
         </section>
     </main>
 
-    <footer>
+    <!-- A decidir o conteúdo do rodapé -->
+    <footer class="p-8">
         <h1>RODAPÉ</h1>
     </footer>
 
