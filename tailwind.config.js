@@ -26,14 +26,6 @@ module.exports = {
       animation: {
         navbar: "navbar 1s ease-in-out backwards"
       },
-      keyframes: {
-        navbar: {
-          "0, 100%": {
-            position: "absolute",
-            left: "-100vw",
-          }
-        }
-      }
     },
   },
   plugins: [],
