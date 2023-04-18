@@ -34,12 +34,12 @@
         </div>
     </header>
 
-    <main>
+    <main class="p-5">
         <section class="p-8">
             <div class="flex justify-evenly items-start">
                 <div class="w-[45%] flex justify-center items-center">
                     <figure>
-                        <img class="rounded-2xl shadow-md" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages2.alphacoders.com%2F243%2F243340.jpg&f=1&nofb=1&ipt=18cfb63b594ccc230affeafac77be704f691f2e585c8dd07e2dcea24d9ffbfd2&ipo=images" 
+                        <img class="rounded-2xl shadow-md" src="https://cdn.wallpapersafari.com/38/77/Roxpk7.jpg" 
                         alt="Pessoa jogando minecraft">
                     </figure>
                 </div>
@@ -114,28 +114,29 @@
         <!-- Futuro: Adicionar um <aside> à esquerda para o quantidade média de estrelas dada pelos clientes (a considerar) -->
         <!-- Necessita ser refatorado -->
         <section class="p-8">
-            <div class="flex flex-col justify-around items-center">
-                <h1 class="text-3xl font-bold p-8">Avaliações de clientes</h1>
-                <div class="flex flex-col w-full items-start bg-white/50 p-3">
+            <h2 class="text-3xl text-center font-bold p-8">Avaliações de clientes</h2>
+            <article class="comentario">
+                <div class="flex flex-col w-full items-start bg-slate-400/10 rounded-xl p-3">
                     <div class="flex flex-row justify-around items-center">
                         <figure>
                             <img class="rounded-2xl shadow-md w-10 h-10" src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
                             alt="Cachorrinho">
                         </figure>
-                            <p class="text-lg font-semibold pl-2">Cachorrinho</p>
+                        <p class="text-lg font-semibold pl-2">Cachorrinho</p>
                     </div>
                     <p class="mt-4 text-slate-400">Gostei muito, ele é muito educado e prestativo. Foi uma gameplay agradável!</p>
                 </div>
-            </div>
+            </article>
         </section>
+        <hr class="border-white/10">
         <!-- A considerar o futuro dessa seção: ficará na página ou escondida atrás de um botão. -->
         <!-- RODE npm run dev ANTES DE COMEÇAR!!! -->
         <section class="p-8">
             <form action="" id="send-review-form">
-                <div class="flex flex-col w-full h-80 justify-around items-start">
+                <div class="flex flex-col w-full h-72 justify-around items-start">
                     <label class="text-3xl font-bold" for="review">Dê sua opinião:</label>
-                    <textarea class="text-slate-400 bg-rich w-full rounded-2xl border border-slate-400/20" name="review" id="review" cols="70" rows="7"></textarea>
-                    <input class="button text-lg w-40" type="submit" value="Enviar">
+                    <textarea class="outline-none p-2 h-36 text-slate-400 bg-rich w-full rounded-2xl border border-slate-400/20" name="review" id="review" cols="70" rows="7"></textarea>
+                    <input class="button text-lg px-16" type="submit" value="Enviar">
                 </div>
             </form>
         </section>
