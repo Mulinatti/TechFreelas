@@ -18,7 +18,7 @@ module.exports = {
         "body-cols": "1fr 4fr",
       },
       gridTemplateRows: {
-        "body-rows": "auto calc(100vh - 73px) auto",
+        "body-rows": "auto auto auto",
       },
       boxShadow: {
         "md": "1px 1px 15px #00000085",
@@ -26,6 +26,9 @@ module.exports = {
       animation: {
         navbar: "navbar 1s ease-in-out backwards"
       },
+      scale: {
+        "102": "1.02"
+      }
     },
   },
   plugins: [],
