@@ -6,6 +6,9 @@ module.exports = {
       "inter": "Inter, sans-serif"
     },
     extend: {
+      screens: {
+        'sm': '510px',
+      },
       colors: {
         "oxford-blue": "#0D1530",
         "box-blue": "#121C40",

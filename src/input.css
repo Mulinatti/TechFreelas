@@ -4,7 +4,7 @@
 
 @layer components {
     .header {
-        @apply bg-oxford-blue/70 flex justify-between py-2 px-5 items-center backdrop-blur-lg sticky top-0 z-50 border-b border-slate-50/10;
+        @apply bg-oxford-blue/70 flex justify-between py-2 px-3 lg:px-5 items-center backdrop-blur-lg sticky top-0 z-50 border-b border-slate-50/10;
     }
     .button {
         @apply bg-blue-600 px-2 py-3 block rounded-lg hover:bg-blue-900 cursor-pointer transition-all;
@@ -22,6 +22,15 @@
         @apply flex flex-col justify-around items-center mb-6;
     }
     .box {
-        @apply w-72 transition-all bg-rich rounded-lg flex shadow-md hover:scale-102
+        @apply flex flex-col mb-5 items-start bg-rich rounded-lg w-full md:max-w-xs hover:scale-102 transition-all shadow-md
+    }
+    .search {
+        @apply text-slate-400 shadow-lg border-l border-y border-white/10 w-full outline-none py-1 px-2 text-lg font-light bg-slate-600/10 placeholder-white/10 rounded-l-xl;
+    }
+    .elipsis {
+        @apply whitespace-nowrap overflow-hidden text-ellipsis;
+    }
+    .main {
+        @apply flex flex-col items-center lg:grid grid-cols-body-cols;
     }
 }
