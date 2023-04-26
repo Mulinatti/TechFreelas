@@ -33,4 +33,7 @@
     .main {
         @apply flex flex-col items-center lg:grid grid-cols-body-cols;
     }
+    .profileItems {
+        @apply bg-slate-400/10 p-5 flex items-center hover:bg-slate-500/30 transition-all rounded-lg mb-3 lg:p-8 lg:text-xl;
+    }
 }
