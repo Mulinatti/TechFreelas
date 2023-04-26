@@ -14,40 +14,44 @@
 </head>
 
 <body class="bg-oxford-blue text-slate-200 font-inter overflow-x-hidden">
-    <header class="header">
-        <figure class="w-14 flex items-center text-2xl">
-            <img src="../../src/imgs/logo.svg" alt="">
-            <figcaption class="font-semibold">TechFreelas</figcaption>
-        </figure>
-        <form class="w-1/3 flex justify-center" action="submit" method="get">
-            <input class="text-slate-400 shadow-lg border-l border-y border-white/10 w-full outline-none py-1 px-2 font-light text-lg bg-slate-600/10 placeholder-white/10 rounded-l-xl" id="search" type="text" placeholder="Busque aqui..." name="searchBar">
+    <header class="header z-20">
+        <div class="flex items-center">
+            <button class="hidden mr-3" id="side-bar"><i class="fa-solid fa-bars text-xl"></i></button>
+            <figure class="items-center text-2xl hidden sm:flex">
+                <img class="w-14" src="../../src/imgs/logo.svg" alt="">
+                <figcaption class="font-semibold hidden md:inline">TechFreelas</figcaption>
+            </figure>
+        </div>
+        <form class="md:w-2/3 w-4/5 lg:w-3/5 flex justify-center" action="submit" method="get">
+            <input class="search" id="search" type="text" name="searchBar">
             <button class="bg-slate-600/30 text-white/40 px-3 rounded-r-xl border-r border-y border-white/10 shadow-lg"><i class="fa-solid fa-search"></i></button>
         </form>
-        <div class="flex w-1/6 justify-between text-slate-400">
+        <div class="flex lg:w-1/6 justify-end lg:justify-between text-slate-400">
+            <button class="lg:hidden p-2"><i class="fa-solid fa-ellipsis-vertical text-xl"></i></button>
             <div class="text-base flex justify-between">
-                <a class="border-r border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/sign.html">Entrar</a>
-                <a class="px-2 hover:text-slate-100" href="../sign-page/sign.html">Cadastrar</a>
+                <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/sign.html">Entrar</a>
+                <a class="px-2 hidden lg:inline hover:text-slate-100" href="../sign-page/sign.html">Cadastrar</a>
             </div>
-            <a class="text-xl" href="#">
+            <a class="text-xl hidden lg:inline" href="#">
                 <i class="fa-solid fa-cart-shopping hover:text-slate-100"></i>
             </a>
         </div>
     </header>
 
-    <main class="p-5">
-        <section class="p-8">
-            <div class="flex justify-evenly items-start">
-                <div class="w-[45%] flex justify-center items-center">
+    <main class="p-2 lg:p-5">
+        <section class="p-4 lg:p-8">
+            <div class="flex flex-col lg:flex-row justify-center lg:justify-evenly items-start">
+                <div class="w-full lg:w-[45%] flex justify-center items-center">
                     <figure>
                         <img class="rounded-2xl shadow-md" src="https://cdn.wallpapersafari.com/38/77/Roxpk7.jpg" 
                         alt="Pessoa jogando minecraft">
                     </figure>
                 </div>
-                <div class=" w-[45%] flex flex-col rounded-2xl flex-shrink">
+                <div class="w-full lg:w-[45%] flex flex-col rounded-2xl flex-shrink">
                     <div>
-                        <div class="flex justify-between items-center">
-                            <p class="text-3xl font-bold w-3/4">Gustavo Muniz Martins</p>
-                            <p class="text-blue-600 text-lg font-semibold w-1/3 flex justify-end">Desenvolvedor</p>
+                        <div class="flex flex-col lg:flex-row justify-between items-center mt-3 lg:mt-0">
+                            <p class="text-3xl font-bold w-full lg:w-3/4">Tommy Lipica</p>
+                            <p class="text-blue-600 text-lg font-semibold w-full lg:w-1/3 lg:text-end">Desenvolvedor</p>
                         </div>
                         <p class="mt-4 text-slate-400 overflow-scroll overflow-x-hidden h-[156px] overscroll-y-none">
                             Waodsosams skam skdalskmk odksaml lskml sdl cae skm oam oo wondsklnskdnlaskn aodiqowiksndknk saoojw.
@@ -66,46 +70,25 @@
                     </div>
                     <hr class="border-white/10 my-5">
 
-                    <div class="flex justify-between items-center">
-                        <div class="flex">
-                            <a class="button mr-3">Adicionar à lista</a>
-                            <a class="button">Contratar</a>
+                    <div class="flex flex-col lg:flex-row justify-between items-center">
+                        <div class="flex flex-col items-center lg:flex-row w-full lg:w-auto text-center">
+                            <a class="button mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto max-w-sm">Adicionar à lista</a>
+                            <a class="button w-full lg:w-auto max-w-sm">Contratar</a>
                         </div>
-                        <p class="text-2xl font-semibold">R$ 23,57/h</p>
+                        <p class="text-2xl font-semibold mt-4 lg:mt-0">R$ 23,57/h</p>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <section class="p-8">
-            <div class="flex flex-col justifly-center items-center">
-                <!-- Todos os atributos ainda serão discutidos... -->
-                <table class="w-full border-separate border-spacing-2">
-                    <caption class="table-caption text-3xl font-bold">Detalhes sobre o prestador do serviço</caption>
-                    <tbody>
-                        <tr class="table-row">
-                            <th class="text-xl font-semibold border border-white/10">Nome</th>
-                            <td class="text-xl font-medium border border-white/10">Gustavo</td>
-                        </tr>
-                        <tr class="table-row">
-                            <th class="text-xl font-semibold border border-white/10">Tempo na plataforma</th>
-                            <td class="text-xl font-medium border border-white/10">5 anos</td>
-                        </tr>
-                        <tr class="table-row">
-                            <th class="text-xl font-semibold border border-white/10">Idade</th>
-                            <td class="text-xl font-medium border border-white/10">25 anos</td>
-                        </tr>
-                        <tr>
-                            <th class="text-xl font-semibold border border-white/10">País</th>
-                            <td class="text-xl font-medium border border-white/10">Brasil</td>
-                        </tr>
-                        <tr>
-                            <th class="text-xl font-semibold border border-white/10">Email</th>
-                            <td class="text-xl font-medium border border-white/10">cabecadanoteclado@umemail.com</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <hr class="border-white/10 my-5">
+        <section class="p-0 lg:p-8">
+            <ul class="flex flex-col justify-between h-[255px] lg:h-[295px] text-sm md:text-lg">
+                <li class="lg:bg-slate-400/10 p-3 rounded-lg bg-none"><strong>Nome</strong>: Tommy Lipica</li>
+                <li class="lg:bg-slate-400/10 p-3 rounded-lg bg-none"><strong>País</strong>: Brasil</li>
+                <li class="lg:bg-slate-400/10 p-3 rounded-lg bg-none"><strong>Tempo na plataforma</strong>: 5 anos</li>
+                <li class="lg:bg-slate-400/10 p-3 rounded-lg bg-none"><strong>Idade</strong>: 20 anos</li>
+                <li class="lg:bg-slate-400/10 p-3 rounded-lg bg-none"><strong>Contato</strong>: tommypica@gmail.com</li>
+            </ul>
         </section>
         <!-- Dividindo tudo em div... -->
         <!-- POSSIBILIDADES: -->
@@ -113,10 +96,11 @@
         <!-- Futuro: Adicionar um sistema de avaliação por estrelas (a considerar) -->
         <!-- Futuro: Adicionar um <aside> à esquerda para o quantidade média de estrelas dada pelos clientes (a considerar) -->
         <!-- Necessita ser refatorado -->
-        <section class="p-8">
-            <h2 class="text-3xl text-center font-bold p-8">Avaliações de clientes</h2>
+        <hr class="border-white/10 my-5">
+        <section class="p-3 lg:p-8">
+            <h2 class="text-xl lg:text-3xl text-center font-bold p-0 lg:p-8 mb-4 lg:mb-0">Avaliações de clientes</h2>
             <article class="comentario">
-                <div class="flex flex-col w-full items-start bg-slate-400/10 rounded-xl p-3">
+                <div class="flex flex-col w-full items-start bg-slate-400/10 rounded-xl p-3 max-h-[152px]">
                     <div class="flex flex-row justify-around items-center">
                         <figure>
                             <img class="rounded-2xl shadow-md w-10 h-10" src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
@@ -124,28 +108,31 @@
                         </figure>
                         <p class="text-lg font-semibold pl-2">Cachorrinho</p>
                     </div>
-                    <p class="mt-4 text-slate-400">Gostei muito, ele é muito educado e prestativo. Foi uma gameplay agradável!</p>
+                    <p class="mt-4 text-slate-400 overflow-scroll overflow-x-hidden">Gostei muito, ele é muito educado e prestativo. Foi uma gameplay agradável!</p>
                 </div>
             </article>
         </section>
-        <hr class="border-white/10">
+        <hr class="border-white/10 my-5">
         <!-- A considerar o futuro dessa seção: ficará na página ou escondida atrás de um botão. -->
         <!-- RODE npm run dev ANTES DE COMEÇAR!!! -->
-        <section class="p-8">
+        <section class="p-3 lg:p-8">
             <form action="" id="send-review-form">
                 <div class="flex flex-col w-full h-72 justify-around items-start">
-                    <label class="text-3xl font-bold" for="review">Dê sua opinião:</label>
+                    <label class="text-xl lg:text-3xl font-bold" for="review">Dê sua opinião:</label>
                     <textarea class="outline-none p-2 h-36 text-slate-400 bg-rich w-full rounded-2xl border border-slate-400/20" name="review" id="review" cols="70" rows="7"></textarea>
-                    <input class="button text-lg px-16" type="submit" value="Enviar">
+                    <input class="button text-lg px-16 w-full md:max-w-sm" type="submit" value="Enviar">
                 </div>
             </form>
         </section>
     </main>
-
-    <!-- A decidir o conteúdo do rodapé -->
-    <footer class="p-8">
-        <h1>RODAPÉ</h1>
+    <footer class="bg-black/60 text-center py-5">
+        <ul class="h-32 flex flex-col justify-between text-slate-500 mb-5">
+            <li>Gabriel de Paulo Mulinari</li>
+            <li>João Matheus Galvão de Oliveira</li>
+            <li>Breno</li>
+            <li>Thiago</li>
+        </ul>
+        <p>Todos os direitos não reservados &nbsp;</p>
     </footer>
-
 </body>
 </html>
