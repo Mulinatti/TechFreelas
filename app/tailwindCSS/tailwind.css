@@ -690,6 +690,30 @@ video {
   }
 }
 
+.profileItems {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: rgb(148 163 184 / 0.1);
+  padding: 1.25rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.profileItems:hover {
+  background-color: rgb(100 116 139 / 0.3);
+}
+
+@media (min-width: 1024px) {
+  .profileItems {
+    padding: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 .absolute {
   position: absolute;
 }
@@ -747,6 +771,10 @@ video {
   margin-bottom: 1.75rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -757,6 +785,10 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .block {
@@ -795,6 +827,10 @@ video {
   height: 255px;
 }
 
+.h-\[80px\] {
+  height: 80px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -829,6 +865,10 @@ video {
 
 .w-48 {
   width: 12rem;
+}
+
+.w-\[80px\] {
+  width: 80px;
 }
 
 .w-full {
@@ -931,6 +971,10 @@ video {
 
 .rounded-2xl {
   border-radius: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-lg {
@@ -1225,9 +1269,25 @@ video {
   .sm\:w-80 {
     width: 20rem;
   }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 768px) {
+  .md\:ml-3 {
+    margin-left: 0.75rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:inline {
     display: inline;
   }
