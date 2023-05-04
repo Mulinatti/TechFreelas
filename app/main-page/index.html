@@ -28,8 +28,16 @@
                 <input class="search" id="search" type="text" name="searchBar">
                 <button class="bg-slate-600/30 text-white/40 px-3 rounded-r-xl border-r border-y border-white/10 shadow-lg"><i class="fa-solid fa-search"></i></button>
             </form>
-            <div class="flex lg:w-1/6 justify-end lg:justify-between text-slate-400">
-                <button class="lg:hidden p-2"><i class="fa-solid fa-ellipsis-vertical text-xl"></i></button>
+            <div class="relative flex lg:w-1/6 justify-end lg:justify-between text-slate-400">
+                <button class="lg:hidden p-2" id="botao-usuario"><i class="fa-solid fa-user text-xl transition-all hover:text-slate-300"></i></button>
+                <div id="dialog-usuario" class="transition-all scale-0 opacity-0 absolute top-12 bg-slate-800 text-slate-200 p-3 rounded-xl text-center">
+                    <ul>
+                        <li class="mb-2"><a href="#">Entrar</a></li>
+                        <li class="mb-2"><a href="#">Cadastrar</a></li>
+                        <li class="mb-2"><a href="#">Carrinho</a></li>
+                        <li class="mb-2"><a href="#">Perfil</a></li>
+                    </ul>
+                </div>
                 <div class="text-base flex justify-between">
                     <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/login.html">Entrar</a>
                     <a class="px-2 hidden lg:inline hover:text-slate-100" href="../sign-page/login.html">Cadastrar</a>
@@ -166,6 +174,7 @@
             </ul>
             <p>Todos os direitos não reservados &nbsp;</p>
         </footer>
-        <script src="navbar.js"></script>
+        <script src="main-js/navbar.js"></script>
+        <script src="main-js/userNavBar.js"></script>
     </body>
 </html>
