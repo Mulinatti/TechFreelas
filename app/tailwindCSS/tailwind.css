@@ -694,6 +694,7 @@ video {
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-radius: 0.5rem;
   background-color: rgb(148 163 184 / 0.1);
   padding: 1.25rem;
