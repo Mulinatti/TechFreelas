@@ -13,32 +13,28 @@
     <link rel="stylesheet" href="../../src/scroll.css">
 </head>
 <body class="bodyPattern">
-    <header class="header justify-center z-20">
-        <div class="flex items-center">
+    <main class="flex flex-col items-center justify-evenly h-screen">
+        <h1>
             <a href="../main-page/index.html">
-                <figure class="items-center text-2xl flex">
-                    <img class="w-14" src="../../src/imgs/logo.svg" alt="">
+                <figure class="items-center text-3xl flex flex-col">
+                    <img class="w-20 mb-2" src="../../src/imgs/logo.svg" alt="Logo Techfreelas">
                     <figcaption class="font-semibold">TechFreelas</figcaption>
                 </figure>
             </a>
-        </div>
-    </header>
-    <main class="relative h-screen">
-        <section class="bg-rich p-10 flex items-center justify-center sm:w-80 sm:h-96 rounded-lg shadow-md h-screen w-screen absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <fieldset class="text-center w-full flex justify-center">
-                <legend class="font-bold text-2xl text-blue-600 mb-4">Login</legend>
-                <form class="flex flex-col items-center h-72 w-4/5 justify-between" action="submit" method="get">
-                    <div class="flex flex-col items-start">
-                        <label for="loginEmail">E-Mail ou CPF/CNPJ</label>
-                        <input class="search w-full border rounded-lg" type="email" name="loginEmail" id="loginEmail">
-                        <label for="loginSenha">Senha</label>
-                        <input class="search w-full border rounded-lg" type="password" name="loginSenha" id="loginSenha">
-                    </div>
-                    <button class="button w-48">Entrar</button>
-                    <a class="text-blue-500 underline" href="#">Não possui uma conta ?</a>
-                </form>
-            </fieldset>
-        </section>
+        </h1>
+        <fieldset>
+            <form action="submit" method="get">
+                <div class="flex flex-col">
+                    <label for="login">E-Mail, CPF ou CNPJ</label>
+                    <input class="bg-rich outline-none text-lg p-2 border border-blue-600/40 rounded-lg" type="text">
+                </div>
+                <div class="flex flex-col">
+                    <label for="password">Senha</label>
+                    <input class="bg-rich outline-none text-lg p-2 border border-blue-600/40 rounded-lg" type="password">
+                </div>
+                <button class="button w-full mt-5">Entrar</button>
+            </form>
+        </fieldset>
     </main>
 </body>
 </html>
