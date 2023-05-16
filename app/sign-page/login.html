@@ -23,7 +23,7 @@
             </a>
         </h1>
         <fieldset>
-            <form action="submit" method="get">
+            <form class="flex item-center justify-center flex-col" action="submit" method="get">
                 <div class="flex flex-col">
                     <label for="login">E-Mail, CPF ou CNPJ</label>
                     <input class="bg-rich outline-none text-lg p-2 border border-blue-600/40 rounded-lg" type="text">
@@ -33,6 +33,12 @@
                     <input class="bg-rich outline-none text-lg p-2 border border-blue-600/40 rounded-lg" type="password">
                 </div>
                 <button class="button w-full mt-5">Entrar</button>
+                <div class="mt-7 h-28 flex flex-col justify-around">
+                    <a class="flex items-center justify-center bg-slate-300 text-black font-semibold button hover:bg-gray-400" href="#"><i class="fa-brands fa-google text-red-600 mr-3"></i><p>Entrar com Google</p></a>
+                    <a class="flex items-center justify-center bg-slate-300 text-black font-semibold button hover:bg-gray-400" href="#"><i class="fa-brands fa-square-facebook text-blue-600 mr-3"></i><p>Entrar com Facebook</p></a>
+                </div>
+                <a class="block text-center mt-2 underline text-blue-400 hover:text-blue-800" href="#">Não possui uma conta ?</a>
+                
             </form>
         </fieldset>
     </main>

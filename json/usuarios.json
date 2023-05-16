@@ -1,0 +1,47 @@
+[
+    {
+        "nome": "Tommy Lipica",
+        "categoria": [
+            {"nome": "desenvolvedor"},
+            {"cor": "text-emerald-500"}
+        ],
+        "preco": "23,57",
+        "imagem": "bannerservice.png"
+    },
+    {
+        "nome": "Joao Matheus",
+        "categoria": [
+            {"nome": "coaching"},
+            {"cor": "text-blue-500"}
+        ],
+        "preco": "21,57",
+        "imagem": "bannerservice.png"
+    },
+    {
+        "nome": "Ednaldo Pereira",
+        "categoria": [
+            {"nome": "artista"},
+            {"cor": "text-red-500"}
+        ],
+        "preco": "25,57",
+        "imagem": "bannerservice.png"
+    },
+    {
+        "nome": "Barzinho Tomando Chopp",
+        "categoria": [
+            {"nome": "professor"},
+            {"cor": "text-yellow-500"}
+        ],
+        "preco": "19,57",
+        "imagem": "bannerservice.png"
+    },
+    {
+        "nome": "Stevie Wonder",
+        "categoria": [
+            {"nome": "audiovisual"},
+            {"cor": "text-purple-500"}
+        ],
+        "preco": "32,57",
+        "imagem": "bannerservice.png"
+    }
+]

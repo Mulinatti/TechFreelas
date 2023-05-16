@@ -30,12 +30,12 @@
             </form>
             <div class="relative flex lg:w-1/6 justify-end lg:justify-between text-slate-400">
                 <button class="lg:hidden p-2" id="botao-usuario"><i class="fa-solid fa-user text-xl transition-all hover:text-slate-300"></i></button>
-                <div id="dialog-usuario" class="transition-all scale-0 opacity-0 absolute top-12 bg-slate-800 text-slate-200 p-3 rounded-xl lg:hidden">
+                <div id="dialog-usuario" class="transition-all scale-0 opacity-0 absolute top-12 bg-slate-800 text-slate-200 p-0 lg:hidden">
                     <ul>
-                        <li class="mb-2"><a href="#">Entrar</a></li>
-                        <li class="mb-2"><a href="#">Cadastrar</a></li>
-                        <li class="mb-2"><a href="#">Carrinho</a></li>
-                        <li class="mb-2"><a href="#">Perfil</a></li>
+                        <li class="mb-2 py-1 px-2 hover:bg-slate-900"><a href="#">Entrar</a></li>
+                        <li class="mb-2 py-1 px-2 hover:bg-slate-900"><a href="#">Cadastrar</a></li>
+                        <li class="mb-2 py-1 px-2 hover:bg-slate-900"><a href="#">Carrinho</a></li>
+                        <li class="mb-2 py-1 px-2 hover:bg-slate-900"><a href="#">Perfil</a></li>
                     </ul>
                 </div>
                 <div class="text-base flex justify-between">
@@ -52,117 +52,17 @@
                 <nav class="flex flex-col items-center">
                     <h3 class="py-4 text-lg text-blue-600">Categorias</h3>
                     <ul class="w-4/5 text-sm">
-                        <li class="categoryItem w-full"><p>Desenvolvedores</p><i class="fa-solid fa-code text-emerald-500"></i></li>
-                        <li class="categoryItem w-full"><p>Artistas</p><i class="fa-solid fa-palette text-red-500"></i></li>
-                        <li class="categoryItem w-full"><p>Coaching</p><i class="fa-solid fa-gamepad text-blue-500"></i></li>
-                        <li class="categoryItem w-full"><p>Audiovisual</p><i class="fa-solid fa-camera text-purple-600"></i></li>
-                        <li class="categoryItem w-full"><p>Professores</p><i class="fa-solid fa-graduation-cap text-yellow-500"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input id="btnTodos" type="button" value="Todos"><i class="fa-solid fa-grip text-slate-300"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input id="btnDev" type="button" value="Desenvolvedores"><i class="fa-solid fa-code text-emerald-500"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input id="btnArtista" type="button" value="Artistas"><i class="fa-solid fa-palette text-red-500"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input id="btnCoach" type="button" value="Coaching"><i class="fa-solid fa-gamepad text-blue-500"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input id="btnAdv" type="button" value="Audiovisual"><i class="fa-solid fa-camera text-purple-500"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input id="btnProf" type="button" value="Professores"><i class="fa-solid fa-graduation-cap text-yellow-500"></i></li>
                     </ul>
                 </nav>
             </section>
-            <section class="p-5 flex flex-col md:flex-row flex-wrap justify-evenly items-center">
-                <div class="box">
-                    <figure class="w-full">
-                        <a class="cursor-pointer" href="../service-page/service-index.html">
-                            <img class="w-full rounded-lg rounded-b-none" src="../../src/imgs/bannerservice.png" alt="">
-                        </a>
-                    </figure>
-                    <div class="w-full px-3 pb-3">
-                        <div class="mb-7">
-                            <p class="text-blue-600 font-bold text-lg elipsis">Desenvolvedor Web</p>
-                            <p class="text-sm text-slate-300 elipsis">Tommy Lipica</p>
-                        </div>
-                        <div class="flex justify-between items-end">
-                            <button class="button">Contratar</button>
-                            <p>23,57/h</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <figure class="w-full">
-                        <a class="cursor-pointer" href="../service-page/service-index.html">
-                            <img class="w-full rounded-lg rounded-b-none" src="../../src/imgs/bannerservice.png" alt="">
-                        </a>
-                    </figure>
-                    <div class="w-full px-3 pb-3">
-                        <div class="mb-7">
-                            <p class="text-blue-600 font-bold text-lg elipsis">Desenvolvedor Web</p>
-                            <p class="text-sm text-slate-300 elipsis">Tommy Lipica</p>
-                        </div>
-                        <div class="flex justify-between items-end">
-                            <button class="button">Contratar</button>
-                            <p>23,57/h</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <figure class="w-full">
-                        <a class="cursor-pointer" href="../service-page/service-index.html">
-                            <img class="w-full rounded-lg rounded-b-none" src="../../src/imgs/bannerservice.png" alt="">
-                        </a>
-                    </figure>
-                    <div class="w-full px-3 pb-3">
-                        <div class="mb-7">
-                            <p class="text-blue-600 font-bold text-lg elipsis">Desenvolvedor Web</p>
-                            <p class="text-sm text-slate-300 elipsis">Tommy Lipica</p>
-                        </div>
-                        <div class="flex justify-between items-end">
-                            <button class="button">Contratar</button>
-                            <p>23,57/h</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <figure class="w-full">
-                        <a class="cursor-pointer" href="../service-page/service-index.html">
-                            <img class="w-full rounded-lg rounded-b-none" src="../../src/imgs/bannerservice.png" alt="">
-                        </a>
-                    </figure>
-                    <div class="w-full px-3 pb-3">
-                        <div class="mb-7">
-                            <p class="text-blue-600 font-bold text-lg elipsis">Desenvolvedor Web</p>
-                            <p class="text-sm text-slate-300 elipsis">Tommy Lipica</p>
-                        </div>
-                        <div class="flex justify-between items-end">
-                            <button class="button">Contratar</button>
-                            <p>23,57/h</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <figure class="w-full">
-                        <a class="cursor-pointer" href="../service-page/service-index.html">
-                            <img class="w-full rounded-lg rounded-b-none" src="../../src/imgs/bannerservice.png" alt="">
-                        </a>
-                    </figure>
-                    <div class="w-full px-3 pb-3">
-                        <div class="mb-7">
-                            <p class="text-blue-600 font-bold text-lg elipsis">Desenvolvedor Web</p>
-                            <p class="text-sm text-slate-300 elipsis">Tommy Lipica</p>
-                        </div>
-                        <div class="flex justify-between items-end">
-                            <button class="button">Contratar</button>
-                            <p>23,57/h</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <figure class="w-full">
-                        <a class="cursor-pointer" href="../service-page/service-index.html">
-                            <img class="w-full rounded-lg rounded-b-none" src="../../src/imgs/bannerservice.png" alt="">
-                        </a>
-                    </figure>
-                    <div class="w-full px-3 pb-3">
-                        <div class="mb-7">
-                            <p class="text-blue-600 font-bold text-lg elipsis">Desenvolvedor Web</p>
-                            <p class="text-sm text-slate-300 elipsis">Tommy Lipica</p>
-                        </div>
-                        <div class="flex justify-between items-end">
-                            <button class="button">Contratar</button>
-                            <p>23,57/h</p>
-                        </div>
-                    </div>
-                </div>
+            <section id="servicos-principais" class="p-5 flex flex-col md:flex-row flex-wrap justify-evenly items-center">
+
             </section>
         </main>
         <footer class="bg-black/60 text-center py-5">
@@ -174,7 +74,9 @@
             </ul>
             <p>Todos os direitos não reservados &nbsp;</p>
         </footer>
-        <script src="main-js/navbar.js"></script>
-        <script src="main-js/userNavBar.js"></script>
+        <script type="module" src="main-js/navbar.js"></script>
+        <script type="module" src="main-js/userNavBar.js"></script>
+        <script type="module" src="main-js/filtraServico.js"></script>
+        <script type="module" src="main-js/adiciona.js"></script>
     </body>
 </html>
