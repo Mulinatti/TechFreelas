@@ -52,17 +52,33 @@
                 <nav class="flex flex-col items-center">
                     <h3 class="py-4 text-lg text-blue-600">Categorias</h3>
                     <ul class="w-4/5 text-sm">
-                        <li class="categoryItem cursor-pointer w-full"><input id="btnTodos" type="button" value="Todos"><i class="fa-solid fa-grip text-slate-300"></i></li>
-                        <li class="categoryItem cursor-pointer w-full"><input id="btnDev" type="button" value="Desenvolvedores"><i class="fa-solid fa-code text-emerald-500"></i></li>
-                        <li class="categoryItem cursor-pointer w-full"><input id="btnArtista" type="button" value="Artistas"><i class="fa-solid fa-palette text-red-500"></i></li>
-                        <li class="categoryItem cursor-pointer w-full"><input id="btnCoach" type="button" value="Coaching"><i class="fa-solid fa-gamepad text-blue-500"></i></li>
-                        <li class="categoryItem cursor-pointer w-full"><input id="btnAdv" type="button" value="Audiovisual"><i class="fa-solid fa-camera text-purple-500"></i></li>
-                        <li class="categoryItem cursor-pointer w-full"><input id="btnProf" type="button" value="Professores"><i class="fa-solid fa-graduation-cap text-yellow-500"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input class="categoryButton capitalize" id="btnTodos" type="button" value="todos"><i class="fa-solid fa-grip text-slate-300"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input class="categoryButton capitalize" id="btnDev" type="button" value="desenvolvedor"><i class="fa-solid fa-code text-emerald-500"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input class="categoryButton capitalize" id="btnArtista" type="button" value="artista"><i class="fa-solid fa-palette text-red-500"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input class="categoryButton capitalize" id="btnCoach" type="button" value="coaching"><i class="fa-solid fa-gamepad text-blue-500"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input class="categoryButton capitalize" id="btnAdv" type="button" value="audiovisual"><i class="fa-solid fa-camera text-purple-500"></i></li>
+                        <li class="categoryItem cursor-pointer w-full"><input class="categoryButton capitalize" id="btnProf" type="button" value="professor"><i class="fa-solid fa-graduation-cap text-yellow-500"></i></li>
                     </ul>
                 </nav>
             </section>
             <section id="servicos-principais" class="p-5 flex flex-col md:flex-row flex-wrap justify-evenly items-center">
-
+                <!--<div class="box">
+                    <figure class="w-full">
+                        <a class="cursor-pointer" href="../service-page/service-index.html">
+                            <img class="w-full rounded-lg rounded-b-none" src="../../src/imgs/bannerservice.png" alt="">
+                        </a>
+                    </figure>
+                    <div class="w-full px-3 pb-3">
+                        <div class="mb-7">
+                            <p class="text-blue-600 font-bold text-lg elipsis">Desenvolvedor Web</p>
+                            <p class="text-sm text-slate-300 elipsis">Tommy Lipica</p>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <button class="button">Contratar</button>
+                            <p>23,57/h</p>
+                        </div>
+                    </div>
+                </div> -->
             </section>
         </main>
         <footer class="bg-black/60 text-center py-5">
@@ -76,7 +92,7 @@
         </footer>
         <script type="module" src="main-js/navbar.js"></script>
         <script type="module" src="main-js/userNavBar.js"></script>
-        <script type="module" src="main-js/filtraServico.js"></script>
-        <script type="module" src="main-js/adiciona.js"></script>
+        <script type="module" src="main-js/content.js"></script>
+        <script type="module" src="main-js/filter.js"></script>
     </body>
 </html>
