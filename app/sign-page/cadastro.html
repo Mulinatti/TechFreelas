@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFreelas | Login</title>
+    <script src="https://kit.fontawesome.com/8ad2738107.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../tailwindCSS/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/scroll.css">
+</head>
+<body class="bodyPattern">
+    <main class="p-5">
+        <h1 class="text-center font-bold text-3xl mb-4">Cadastro</h1>
+        <section>
+            <form class="flexCol md:max-w-xl" action="post">
+                <section class="md:grid md:grid-cols-2 mb-5">
+                    <h2 class="text-2xl font-bold mb-4">Dados Pessoais</h2>
+                    <div class="flexCol col-span-2">
+                        <label for="nome">Nome Completo</label>
+                        <input class="inputStyle" type="text">
+                    </div>
+                    <div class="flexCol md:max-w-[80%]">
+                        <label for="cpf">CPF</label>
+                        <input class="inputStyle" type="text">
+                    </div>
+                    <div class="flexCol col-span-2 md:max-w-[60%]">
+                        <label for="senha">Senha</label>
+                        <input class="inputStyle" type="password">
+                    </div>
+                    <div class="flexCol col-span-2 md:max-w-[60%]">
+                        <label for="confirmeSenha">Confirme a Senha</label>
+                        <input class="inputStyle" type="password">
+                    </div>
+                </section>
+                <section class="mt-5">
+                    <h2 class="text-2xl font-bold mb-4">Endereço</h2>
+                    <div class="flexCol md:w-2/5">
+                        <label for="cep">CEP</label>
+                        <input class="inputStyle" type="text">
+                    </div>
+                    <div class="flexCol">
+                        <label for="rua">Rua</label>
+                        <input class="inputStyle" type="text">
+                    </div>
+                    <div class="flexCol md:w-1/5">
+                        <label for="numeroRua">Número</label>
+                        <input class="inputStyle" type="text">
+                    </div>
+                    <div class="flexCol md:w-3/5">
+                        <label for="bairro">Bairro</label>
+                        <input class="inputStyle" type="text">
+                    </div>
+                    <div class="flexCol md:w-2/5">
+                        <label for="cidade">Cidade</label>
+                        <input class="inputStyle" type="text">
+                    </div>
+                    <div class="flexCol md:w-1/12">
+                        <label for="uf">UF</label>
+                        <input class="inputStyle" type="text">
+                    </div>
+                </section>
+                <input class="button mt-5 md:w-1/2" type="submit" value="Cadastrar">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
