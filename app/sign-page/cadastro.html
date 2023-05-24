@@ -20,56 +20,75 @@
     <main class="p-5">
         <h1 class="text-center font-bold text-3xl mb-4">Cadastro</h1>
         <section>
-            <form class="flexCol md:max-w-xl" action="post">
+            <form class="flexCol md:max-w-xl">
                 <section class="md:grid md:grid-cols-2 mb-5">
                     <h2 class="text-2xl font-bold mb-4">Dados Pessoais</h2>
                     <div class="flexCol col-span-2">
                         <label for="nome">Nome Completo</label>
-                        <input class="inputStyle" type="text">
+                        <input id="nome" class="inputStyle" type="text">
                     </div>
-                    <div class="flexCol md:max-w-[80%]">
+                    <div class="flexCol md:max-w-[90%]">
                         <label for="cpf">CPF</label>
-                        <input class="inputStyle" type="text">
+                        <input id="cpf" class="inputStyle" type="text">
+                    </div>
+                    <div class="flexCol md:max-w-[100%]">
+                        <label for="nascimento">Data de nascimento</label>
+                        <input id="nascimento" class="inputStyle" type="date">
+                    </div>
+                    <div class="flexCol col-span-2 md:max-w-[60%]">
+                        <label for="email">E-Mail</label>
+                        <input id="email" class="inputStyle" type="email">
                     </div>
                     <div class="flexCol col-span-2 md:max-w-[60%]">
                         <label for="senha">Senha</label>
-                        <input class="inputStyle" type="password">
+                        <input id="senha" class="inputStyle" type="password">
                     </div>
                     <div class="flexCol col-span-2 md:max-w-[60%]">
                         <label for="confirmeSenha">Confirme a Senha</label>
-                        <input class="inputStyle" type="password">
+                        <input id="confsenha" class="inputStyle" type="password">
                     </div>
                 </section>
                 <section class="mt-5">
                     <h2 class="text-2xl font-bold mb-4">Endereço</h2>
                     <div class="flexCol md:w-2/5">
                         <label for="cep">CEP</label>
-                        <input class="inputStyle" type="text">
+                        <input id="cep" class="inputStyle" type="text">
                     </div>
                     <div class="flexCol">
                         <label for="rua">Rua</label>
-                        <input class="inputStyle" type="text">
+                        <input id="rua" class="inputStyle" type="text">
                     </div>
                     <div class="flexCol md:w-1/5">
                         <label for="numeroRua">Número</label>
-                        <input class="inputStyle" type="text">
+                        <input id="numero" class="inputStyle" type="text">
                     </div>
                     <div class="flexCol md:w-3/5">
                         <label for="bairro">Bairro</label>
-                        <input class="inputStyle" type="text">
+                        <input id="bairro" class="inputStyle" type="text">
                     </div>
                     <div class="flexCol md:w-2/5">
                         <label for="cidade">Cidade</label>
-                        <input class="inputStyle" type="text">
+                        <input id="cidade" class="inputStyle" type="text">
                     </div>
                     <div class="flexCol md:w-1/12">
                         <label for="uf">UF</label>
-                        <input class="inputStyle" type="text">
+                        <input id="uf" class="inputStyle" type="text">
                     </div>
                 </section>
-                <input class="button mt-5 md:w-1/2" type="submit" value="Cadastrar">
+                <div class="md:flex justify-between items-center mt-5 md:w-4/5">
+                    <button id="cadastrar" class="button w-full md:w-1/2 mb-2 md:mb-0">Cadastrar</button>
+                    <span id="aviso" class="invisible text-red-500 text-center">Preencha todos os campos!</span>
+                </div>
             </form>
         </section>
     </main>
+    <style>
+        input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+    </style>
 </body>
+<script type="module" src="sign-js/validacao.js"></script>
 </html>
