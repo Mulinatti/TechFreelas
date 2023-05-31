@@ -34,7 +34,7 @@
         @apply flex flex-col items-center lg:grid grid-cols-body-cols;
     }
     .profileItems {
-        @apply bg-slate-400/10 p-5 flex justify-between items-center hover:bg-slate-500/30 transition-all rounded-lg mb-3 lg:p-8 lg:text-xl;
+        @apply bg-slate-400/10 p-5 flex flex-col justify-between items-start hover:bg-slate-500/30 transition-all rounded-lg mb-3 lg:p-8 lg:text-xl;
     }
     .inputStyle {
         @apply bg-rich mb-3 outline-none text-lg p-2 border border-blue-600/40 rounded-lg;
