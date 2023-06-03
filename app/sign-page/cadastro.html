@@ -47,6 +47,9 @@
                         <label for="confirmeSenha">Confirme a Senha</label>
                         <input id="confsenha" class="inputStyle" type="password">
                     </div>
+                    <div>
+                        <span class="invisible text-red-500" id="senhaVal">Senhas não coincidem</span>
+                    </div>
                 </section>
                 <section class="mt-5">
                     <h2 class="text-2xl font-bold mb-4">Endereço</h2>
@@ -83,12 +86,14 @@
         </section>
     </main>
     <style>
-        input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-}
+            input[type="date"]::-webkit-inner-spin-button,
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+    }
     </style>
 </body>
 <script type="module" src="sign-js/validacao.js"></script>
+<script type="module" src="sign-js/password.js"></script>
+<script type="module" src="sign-js/cep.js"></script>
 </html>
