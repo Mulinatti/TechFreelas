@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="scroll.css">
+    <link rel="stylesheet" href="../../src/scroll.css">
     <title>Página do Serviço</title>
 </head>
 
@@ -51,45 +51,68 @@
                 <div>
                     <p class="text-lg">Saldo: R$00.00</p>
                 </div> 
-                <button class="button mt-5 md:mt-0 md:ml-3">Comprar Novamente</button>
             </div>
         </section>
         <hr class="border-white/10 my-5">
         <section class="flex justify-center p-3">
             <ul class="w-full">
                 <li class="profileItems">
-                    <div class="flex items-center">
-                        <i class="fa-solid fa-user mr-3"></i>
-                        <p>Dados</p>
+                    <div class="flex justify-between w-full">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-user mr-3"></i>
+                            <p>Dados</p>
+                        </div>
+                        <button><i class="fa-solid fa-chevron-down"></i></button>
+                    </div> 
+                    <div class="hidden mt-4 dados">
+                        <div class="flexCol col-span-2">
+                            <label for="nome">Nome Completo</label>
+                            <input id="nome" class="inputStyle" type="text">
+                        </div>
+                        <div class="flexCol md:max-w-[90%]">
+                            <label for="cpf">CPF</label>
+                            <input id="cpf" class="inputStyle" type="text">
+                        </div>
+                        <div class="flexCol md:max-w-[100%]">
+                            <label for="nascimento">Data de nascimento</label>
+                            <input id="nascimento" class="inputStyle" type="date">
+                        </div>
+                        <div class="flexCol col-span-2 md:max-w-[60%]">
+                            <label for="email">E-Mail</label>
+                            <input id="email" class="inputStyle" type="email">
+                        </div>
+                        <div class="flexCol md:w-2/5">
+                            <label for="cep">CEP</label>
+                            <input id="cep" class="inputStyle" type="text">
+                        </div>
                     </div>
-                    <button><i class="fa-solid fa-chevron-down"></i></button>
                 </li>
                 <li class="profileItems">
-                    <div class="flex items-center">
-                        <i class="fa-solid fa-cart-shopping mr-3"></i>
-                        <p>Meus Pedidos</p>
+                    <div class="flex justify-between w-full">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-cart-shopping mr-3"></i>
+                            <p>Meus Pedidos</p>
+                        </div>
+                        <button><i class="fa-solid fa-chevron-down"></i></button>
                     </div>
-                    <button><i class="fa-solid fa-chevron-down"></i></button>
+                    <div class="hidden mt-4 dados">
+                        <p>Alomomola</p>
+                        <p>Girafarig</p>
+                        <p>Farigiraf</p>
+                    </div>
                 </li>
                 <li class="profileItems">
-                    <div class="flex items-center">
-                        <i class="fa-solid fa-star mr-3"></i>
-                        <p>Avaliações</p>
+                    <div class="flex justify-between w-full">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-phone mr-3"></i>
+                            <p>Atendimento</p>
+                        </div>
+                        <button><i class="fa-solid fa-chevron-down"></i></button>
                     </div>
-                    <button><i class="fa-solid fa-chevron-down"></i></button></li>
-                <li class="profileItems">
-                    <div class="flex items-center">
-                        <i class="fa-solid fa-phone mr-3"></i>
-                        <p>Atendimento</p>
+                    <div class="hidden mt-4 dados">
+                        <p>(11) 4002-8922</p>
+                        <p>reply@accounts.nintendo.com</p>
                     </div>
-                    <button><i class="fa-solid fa-chevron-down"></i></button>
-                </li>
-                <li class="profileItems">
-                    <div class="flex items-center">
-                        <i class="fa-solid fa-heart mr-3"></i>
-                        <p>Favoritos</p>
-                    </div>
-                    <button><i class="fa-solid fa-chevron-down"></i></button>
                 </li>
             </ul>
         </section>
@@ -104,4 +127,5 @@
             </ul>
             <p>Todos os direitos não reservados &nbsp;</p>
         </footer>
+        <script src="profile-js/profile.js" type="module"></script>
 </body>
