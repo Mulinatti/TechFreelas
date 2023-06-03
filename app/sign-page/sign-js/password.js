@@ -25,6 +25,5 @@ password.addEventListener("input", () => {
         password.classList.remove("border-red-500")
         passwordConf.classList.remove("border-red-500")
         passwordVal.classList.add("invisible")
-
     }
 })
