@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Mulinatti/TechFreelas#readme",
   "devDependencies": {
     "tailwindcss": "^3.3.1"
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
   }
 }

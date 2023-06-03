@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../src/scroll.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </head>
 <body class="bodyPattern">
     <main class="p-5">
@@ -34,6 +35,7 @@
                     <div class="flexCol md:max-w-[100%]">
                         <label for="nascimento">Data de nascimento</label>
                         <input id="nascimento" class="inputStyle" type="date">
+                        <span class="text-red-500 invisible" id="erroData">O usuário deve ser maior de idade</span>
                     </div>
                     <div class="flexCol col-span-2 md:max-w-[60%]">
                         <label for="email">E-Mail</label>
@@ -96,4 +98,5 @@
 <script type="module" src="sign-js/validacao.js"></script>
 <script type="module" src="sign-js/password.js"></script>
 <script type="module" src="sign-js/cep.js"></script>
+<script type="module" src="sign-js/date.js"></script>
 </html>
