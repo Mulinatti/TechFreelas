@@ -43,14 +43,19 @@
         <section class="p-3 flex flex-col justify-center items-center sm:justify-between sm:flex-row">
             <div class="flex flex-row items-start">
                 <figure class="flex flex-row items-center justify-end">
-                    <img class="rounded-full w-[80px] h-[80px] shadow-md" src="https://scontent-gru1-2.xx.fbcdn.net/v/t1.6435-9/117401628_1968798923256379_5510456240228104427_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=730e14&_nc_ohc=EZeDtiE3oesAX_HxruN&_nc_ht=scontent-gru1-2.xx&oh=00_AfCUQppcP3AVrZwpGYX2ibEg3USkt8gKJOnj6hINpxTCww&oe=647074BD" alt="anon">
+                    <img class="rounded-full w-[80px] h-[80px] shadow-md" src="../../src/imgs/bannerservice.png" alt="anon">
                     <figcaption class="text-2xl text-center w-full ml-4">Tommy Lipica</figcaption>
                 </figure>
             </div>
-            <div class="flex flex-col justify-center items-center mt-5 md:flex-row md:mt-0">
+            <div class="flex flex-col justify-center items-center mt-5 md:flex-row sm:mt-0">
                 <div>
                     <p class="text-lg">Saldo: R$00.00</p>
                 </div> 
+            </div>
+        </section>
+        <section class="flex justify-center sm:justify-start mt-5">
+            <div>
+                <button class="button"><a href="../service-page/create-service.html">Anunciar serviço</a></button>
             </div>
         </section>
         <hr class="border-white/10 my-5">
@@ -64,27 +69,26 @@
                         </div>
                         <button><i class="fa-solid fa-chevron-down"></i></button>
                     </div> 
-                    <div class="hidden mt-4 dados">
-                        <div class="flexCol col-span-2">
-                            <label for="nome">Nome Completo</label>
-                            <input id="nome" class="inputStyle" type="text">
+                    <div class="hidden mt-4 dados w-full">
+                        <div class="w-full flex items-center">
+                            <div class="w-full md:w-3/5">
+                                <label for="email">E-Mail</label>
+                                <input id="email" class="inputStyle w-full" type="email" value="gabrielmulinari2002@gmail.com">
+                            </div>
                         </div>
-                        <div class="flexCol md:max-w-[90%]">
-                            <label for="cpf">CPF</label>
-                            <input id="cpf" class="inputStyle" type="text">
+                        <div class="w-full flex items-center">
+                            <div class="w-full md:w-2/6">
+                                <label for="username">Username</label>
+                                <input id="usernameInput" class="inputStyle w-full" type="text">
+                            </div>
                         </div>
-                        <div class="flexCol md:max-w-[100%]">
-                            <label for="nascimento">Data de nascimento</label>
-                            <input id="nascimento" class="inputStyle" type="date">
+                        <div class="w-full flex items-center">
+                            <div class="w-full md:w-2/6">
+                                <label for="altSenha">Senha</label>
+                                <input id="altSenha" class="inputStyle w-full" type="password">
+                            </div>
                         </div>
-                        <div class="flexCol col-span-2 md:max-w-[60%]">
-                            <label for="email">E-Mail</label>
-                            <input id="email" class="inputStyle" type="email">
-                        </div>
-                        <div class="flexCol md:w-2/5">
-                            <label for="cep">CEP</label>
-                            <input id="cep" class="inputStyle" type="text">
-                        </div>
+                        <button class="button mt-3 text-base">Confirmar alterações</button>
                     </div>
                 </li>
                 <li class="profileItems">
