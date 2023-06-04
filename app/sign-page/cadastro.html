@@ -21,25 +21,25 @@
     <main class="p-5">
         <h1 class="text-center font-bold text-3xl mb-4">Cadastro</h1>
         <section>
-            <form class="flexCol md:max-w-xl">
+            <form class="flexCol md:max-w-xl" action="php-db/registro.php" method="POST">
                 <section class="md:grid md:grid-cols-2 mb-5">
                     <h2 class="text-2xl font-bold mb-4">Dados Pessoais</h2>
                     <div class="flexCol col-span-2">
                         <label for="nome">Nome Completo</label>
-                        <input id="nome" class="inputStyle" type="text">
+                        <input id="nome" class="inputStyle" type="text" name="nome_completo">
                     </div>
                     <div class="flexCol md:max-w-[90%]">
                         <label for="cpf">CPF</label>
-                        <input id="cpf" class="inputStyle" type="text">
+                        <input id="cpf" class="inputStyle" type="text" name="cpf">
                     </div>
                     <div class="flexCol md:max-w-[100%]">
                         <label for="nascimento">Data de nascimento</label>
-                        <input id="nascimento" class="inputStyle" type="date">
+                        <input id="nascimento" class="inputStyle" type="date" name="data_nascimento">
                         <span class="text-red-500 invisible" id="erroData">O usuário deve ser maior de idade</span>
                     </div>
                     <div class="flexCol col-span-2 md:max-w-[60%]">
                         <label for="email">E-Mail</label>
-                        <input id="email" class="inputStyle" type="email">
+                        <input id="email" class="inputStyle" type="email" name="email">
                     </div>
                     <div class="flexCol col-span-2 md:max-w-[60%]">
                         <label for="senha">Senha</label>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="flexCol col-span-2 md:max-w-[60%]">
                         <label for="confirmeSenha">Confirme a Senha</label>
-                        <input id="confsenha" class="inputStyle" type="password">
+                        <input id="confsenha" class="inputStyle" type="password" name="senha">
                     </div>
                     <div>
                         <span class="invisible text-red-500" id="senhaVal">Senhas não coincidem</span>
@@ -57,31 +57,31 @@
                     <h2 class="text-2xl font-bold mb-4">Endereço</h2>
                     <div class="flexCol md:w-2/5">
                         <label for="cep">CEP</label>
-                        <input id="cep" class="inputStyle" type="text">
+                        <input id="cep" class="inputStyle" type="text" name="cep">
                     </div>
                     <div class="flexCol">
                         <label for="rua">Rua</label>
-                        <input id="rua" class="inputStyle" type="text">
+                        <input id="rua" class="inputStyle" type="text" name="rua">
                     </div>
                     <div class="flexCol md:w-1/5">
                         <label for="numeroRua">Número</label>
-                        <input id="numero" class="inputStyle" type="text">
+                        <input id="numero" class="inputStyle" type="text" name="numero_rua">
                     </div>
                     <div class="flexCol md:w-3/5">
                         <label for="bairro">Bairro</label>
-                        <input id="bairro" class="inputStyle" type="text">
+                        <input id="bairro" class="inputStyle" type="text" name="bairro">
                     </div>
                     <div class="flexCol md:w-2/5">
                         <label for="cidade">Cidade</label>
-                        <input id="cidade" class="inputStyle" type="text">
+                        <input id="cidade" class="inputStyle" type="text" name="cidade">
                     </div>
                     <div class="flexCol md:w-1/12">
                         <label for="uf">UF</label>
-                        <input id="uf" class="inputStyle" type="text">
+                        <input id="uf" class="inputStyle" type="text" name="uf">
                     </div>
                 </section>
                 <div class="md:flex justify-between items-center mt-5 md:w-4/5">
-                    <button id="cadastrar" class="button w-full md:w-1/2 mb-2 md:mb-0">Cadastrar</button>
+                    <button id="cadastrar" class="button w-full md:w-1/2 mb-2 md:mb-0" name="cadastrar" value="Submit">Cadastrar</button>
                     <span id="aviso" class="invisible text-red-500 text-center">Preencha todos os campos!</span>
                 </div>
             </form>
