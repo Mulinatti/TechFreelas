@@ -1,3 +1,42 @@
+<?php
+include "app/db-php/db.php";
+
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    if (isset($_POST["submit"])) {
+        $nome_completo = $_POST["nome_completo"];
+        $cpf = $_POST["cpf"];
+        $data_nascimento = $_POST["data_nascimento"];
+        $email = $_POST["email"];
+        $senha = $_POST["senha"];
+        $cep = $_POST["cep"];
+        $rua = $_POST["rua"];
+        $numero_rua = $_POST["numero_rua"];
+        $bairro = $_POST["bairro"];
+        $cidade = $_POST["cidade"];
+        $uf = $_POST["uf"];
+        
+        $mensagem = "";
+        // Checando se há registro
+        $achou = false;
+        $select = $db->prepare("SELECT * FROM Usuario WHERE email = :email");
+        $select->bindParam(':email', $email);
+        $select->execute();
+        while($linha = $select->fetch(PDO::FETCH_ASSOC)) {
+            if ($linha["Senha"] == $senha) {
+                $achou = true;
+                break;
+            }
+        }
+        if($achou) {
+            $mensagem = "O usuário já está cadastrado!";
+        } else {
+            $mensagem = "O usuário não está cadastrado!";
+        }
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +60,7 @@
     <main class="p-5">
         <h1 class="text-center font-bold text-3xl mb-4">Cadastro</h1>
         <section>
-            <form class="flexCol md:max-w-xl" action="registro.php" method="POST">
+            <form class="flexCol md:max-w-xl" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
                 <section class="md:grid md:grid-cols-2 mb-5">
                     <h2 class="text-2xl font-bold mb-4">Dados Pessoais</h2>
                     <div class="flexCol col-span-2">
@@ -46,7 +85,7 @@
                         <input id="senha" class="inputStyle" type="password">
                     </div>
                     <div class="flexCol col-span-2 md:max-w-[60%]">
-                        <label for="confirmeSenha">Confirme a Senha</label>
+                        <label for="confsenha">Confirme a Senha</label>
                         <input id="confsenha" class="inputStyle" type="password" name="senha">
                     </div>
                     <div>
@@ -64,7 +103,7 @@
                         <input id="rua" class="inputStyle" type="text" name="rua">
                     </div>
                     <div class="flexCol md:w-1/5">
-                        <label for="numeroRua">Número</label>
+                        <label for="numero">Número</label>
                         <input id="numero" class="inputStyle" type="text" name="numero_rua">
                     </div>
                     <div class="flexCol md:w-3/5">
@@ -81,9 +120,13 @@
                     </div>
                 </section>
                 <div class="md:flex justify-between items-center mt-5 md:w-4/5">
-                    <button id="cadastrar" class="button w-full md:w-1/2 mb-2 md:mb-0" type="submit">Cadastrar</button>
+                    <!--<input id="cadastrar" class="button w-full md:w-1/2 mb-2 md:mb-0" name="cadastrar" value="Cadastrar" type="submit">-->
+                    <input class="button" type="submit" name="submit" value="sei la">
                     <span id="aviso" class="invisible text-red-500 text-center">Preencha todos os campos!</span>
                 </div>
+                <?php
+                    echo '<p>'.$mensagem.'</p>';
+                ?>
             </form>
         </section>
     </main>
