@@ -97,8 +97,8 @@
             <ul class="h-32 flex flex-col justify-between text-slate-500 mb-5">
                 <li>Gabriel de Paulo Mulinari</li>
                 <li>João Matheus Galvão de Oliveira</li>
-                <li>Breno</li>
-                <li>Thiago</li>
+                <li>Breno Serra da Silva</li>
+                <li>Thiago da Silva Lourenco</li>
             </ul>
             <p>Todos os direitos não reservados &nbsp;</p>
         </footer>

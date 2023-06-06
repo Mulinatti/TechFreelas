@@ -729,6 +729,11 @@ video {
   outline-offset: 2px;
 }
 
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
 .categoryButton {
   display: flex;
   height: 100%;
@@ -764,6 +769,10 @@ video {
 
 .z-20 {
   z-index: 20;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .mx-auto {
@@ -1384,8 +1393,36 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:inline {
     display: inline;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:grid {
+    display: grid;
+  }
+
+  .md\:w-1\/12 {
+    width: 8.333333%;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:w-1\/5 {
+    width: 20%;
+  }
+
+  .md\:w-2\/5 {
+    width: 40%;
   }
 
   .md\:w-2\/6 {
@@ -1396,8 +1433,32 @@ video {
     width: 60%;
   }
 
+  .md\:w-4\/5 {
+    width: 80%;
+  }
+
+  .md\:max-w-\[100\%\] {
+    max-width: 100%;
+  }
+
+  .md\:max-w-\[60\%\] {
+    max-width: 60%;
+  }
+
+  .md\:max-w-\[90\%\] {
+    max-width: 90%;
+  }
+
   .md\:max-w-sm {
     max-width: 24rem;
+  }
+
+  .md\:max-w-xl {
+    max-width: 36rem;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {

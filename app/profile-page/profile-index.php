@@ -1,7 +1,55 @@
 <?php
+    include "app/db-php/db.php";
     session_start();
 
+    // Condicionando a exibição dessa página
     if($_SESSION["usuario"]) {
+        if (isset($_POST["confi_email"])) {
+            $outro_email = isset($_POST["email"]) ? $_POST["email"] : '';
+
+            // Mudando o email
+            if (!empty($outro_email)) {
+                if ($_SESSION["email"] == $outro_email) {
+                    $mensagem = "Os emails são iguais!";
+                } else {
+                    $update = $db->prepare("UPDATE Usuario SET Email = :email WHERE User_ID = :id");
+                    $update->bindValue(':email', $outro_email);
+                    $update->bindValue(':id', $_SESSION["user_id"]);
+                    $update->execute();
+                    $_SESSION["email"] = $outro_email;
+                }
+            }
+        }
+        if(isset($_POST["confi_nome"])) {
+            $outro_nome = isset($_POST["nome"]) ? $_POST["nome"] : '';
+            if (!empty($outro_nome)) {
+                if ($_SESSION["usuario"] == $outro_nome) {
+                    $mensagem = "Os nomes são iguais!";
+                } else {
+                    $update = $db->prepare("UPDATE Usuario SET Nome = :nome WHERE User_ID = :id");
+                    $update->bindValue(':nome', $outro_nome);
+                    $update->bindValue(':id', $_SESSION["user_id"]);
+                    $update->execute();
+                    $_SESSION["usuario"] = $outro_nome;
+                }
+            }
+        }
+        if (isset($_POST["confi_nova_senha"])) {
+            $outra_senha = isset($_POST["senha"]) ? $_POST["senha"] : '';
+            $confi_outra_senha = isset($_POST["confi_senha"]) ? $_POST["confi_senha"] : '';
+
+            // Atualizando a senha
+            if (!empty($outra_senha) && !empty($confi_outra_senha)) {
+                if ($outra_senha == $confi_outra_senha) {
+                    $update = $db->prepare("UPDATE Usuario SET Senha = :nova_senha WHERE User_ID = :id");
+                    $update->bindValue(':nova_senha', $confi_outra_senha);
+                    $update->bindValue(':id', $_SESSION["user_id"]);
+                    $update->execute();
+                } else {
+                    $mensagem = "As senhas não batem!";
+                }
+            }
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +99,8 @@
         <section class="p-3 flex flex-col justify-center items-center sm:justify-between sm:flex-row">
             <div class="flex flex-row items-start">
                 <figure class="flex flex-row items-center justify-end">
-                    <img class="rounded-full w-[80px] h-[80px] shadow-md" src="../../src/imgs/bannerservice.png" alt="anon">
+                    <!--<img class="rounded-full w-[80px] h-[80px] shadow-md" src="../../src/imgs/bannerservice.png" alt="anon">-->
+                    <img class="rounded-full w-[80px] h-[80px] shadow-md" src="<?php echo '../../'.$_SESSION["foto"]; ?>" alt="Foto de perfil">
                     <figcaption class="text-2xl text-center w-full ml-4"><?php echo $_SESSION["usuario"] ?></figcaption>
                 </figure>
             </div>
@@ -76,28 +125,48 @@
                             <p>Dados</p>
                         </div>
                         <button><i class="fa-solid fa-chevron-down"></i></button>
-                    </div> 
+                    </div>
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
                     <div class="hidden mt-4 dados w-full">
                         <div class="w-full flex items-center">
                             <div class="w-full md:w-3/5">
-                                <label for="email">E-Mail</label>
-                                <input id="email" class="inputStyle w-full" type="email" value="gabrielmulinari2002@gmail.com">
+                                <!--<label for="email">E-Mail</label>
+                                <input id="email" class="inputStyle w-full" type="email" value="gabrielmulinari2002@gmail.com">-->
+                                <label for="email">E-mail (<?php echo $_SESSION["email"] ?>)</label>
+                                <input id="email" class="inputStyle w-full" type="email" name="email" placeholder="Modifique seu e-mail">
+                                <button class="button mt-3 text-base" type="submit" name="confi_email">Confirmar email</button>
                             </div>
                         </div>
                         <div class="w-full flex items-center">
                             <div class="w-full md:w-2/6">
-                                <label for="username">Username</label>
-                                <input id="usernameInput" class="inputStyle w-full" type="text">
+                                <!--<label for="username">Username</label>
+                                <input id="usernameInput" class="inputStyle w-full" type="text">-->
+                                <label for="nome">Seu nome (<?php echo $_SESSION["usuario"] ?>)</label>
+                                <input id="nome" class="inputStyle w-full" type="text" name="nome" placeholder="Edite seu nome">
+                                <button class="button mt-3 text-base" type="submit" name="confi_nome">Confirmar novo nome</button>
                             </div>
                         </div>
                         <div class="w-full flex items-center">
                             <div class="w-full md:w-2/6">
-                                <label for="altSenha">Senha</label>
-                                <input id="altSenha" class="inputStyle w-full" type="password">
+                                <!--<label for="altSenha">Senha</label>
+                                <input id="altSenha" class="inputStyle w-full" type="password">-->
+                                <label for="senha">Modifique sua senha</label>
+                                <input id="senha" class="inputStyle w-full" type="password" name="senha" placeholder="Nova senha">
                             </div>
                         </div>
-                        <button class="button mt-3 text-base">Confirmar alterações</button>
+                        <div class="w-full flex items-center">
+                            <div class="w-full md:w-2/6">
+                                <!--<label for="altSenha">Senha</label>
+                                <input id="altSenha" class="inputStyle w-full" type="password">-->
+                                <label for="confi_senha">Confirme a senha</label>
+                                <input id="confi_senha" class="inputStyle w-full" type="password" name="confi_senha" placeholder="Confirme">
+                                <button class="button mt-3 text-base" type="submit" name="confi_nova_senha">Confirmar nova senha</button>
+                            </div>
+                        </div>
+                        <!--<button class="button mt-3 text-base" type="submit" name="confirmar">Confirmar alterações</button>-->
+                        <?php echo '<p>'.$mensagem.'</p>' ?>
                     </div>
+                    </form>
                 </li>
                 <li class="profileItems">
                     <div class="flex justify-between w-full">
@@ -135,7 +204,7 @@
                 <li>Gabriel de Paulo Mulinari</li>
                 <li>João Matheus Galvão de Oliveira</li>
                 <li>Breno Serra da Silva</li>
-                <li>Thiago</li>
+                <li>Thiago da Silva Lourenco</li>
             </ul>
             <p>Todos os direitos não reservados &nbsp;</p>
         </footer>
