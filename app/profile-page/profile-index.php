@@ -1,7 +1,28 @@
 <?php
+    include "app/db-php/db.php";
     session_start();
 
+    // Condicionando a exibição dessa página
     if($_SESSION["usuario"]) {
+        if (isset($_POST["confirmar"])) {
+            $outro_email = isset($_POST["email"]) ? $_POST["email"] : '';
+            $outro_nome = isset($_POST["nome"]) ? $_POST["nome"] : '';
+            // TODO: se "senha" foi setado, "confi_senha" também deve estar.
+            $outra_senha = isset($_POST["senha"]) ? $_POST["senha"] : '';
+
+            // Mudando o email
+            if (!empty($outro_email)) {
+                if ($_SESSION["email"] == $outro_email) {
+                    $mensagem = "Os emails são iguais!";
+                } else {
+                    $update = $db->prepare("UPDATE Usuario SET Email = :email WHERE User_ID = :id");
+                    $update->bindValue(':email', $outro_email);
+                    $update->bindValue(':id', $_SESSION["user_id"]);
+                    $update->execute();
+                    $_SESSION["email"] = $outro_email;
+                }
+            }
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,14 +97,15 @@
                             <p>Dados</p>
                         </div>
                         <button><i class="fa-solid fa-chevron-down"></i></button>
-                    </div> 
+                    </div>
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
                     <div class="hidden mt-4 dados w-full">
                         <div class="w-full flex items-center">
                             <div class="w-full md:w-3/5">
                                 <!--<label for="email">E-Mail</label>
                                 <input id="email" class="inputStyle w-full" type="email" value="gabrielmulinari2002@gmail.com">-->
                                 <label for="email">E-mail (<?php echo $_SESSION["email"] ?>)</label>
-                                <input id="email" class="inputStyle w-full" type="email" placeholder="Modifique seu e-mail">
+                                <input id="email" class="inputStyle w-full" type="email" name="email" placeholder="Modifique seu e-mail">
                             </div>
                         </div>
                         <div class="w-full flex items-center">
@@ -91,7 +113,7 @@
                                 <!--<label for="username">Username</label>
                                 <input id="usernameInput" class="inputStyle w-full" type="text">-->
                                 <label for="nome">Seu nome (<?php echo $_SESSION["usuario"] ?>)</label>
-                                <input id="nome" class="inputStyle w-full" type="text" placeholder="Edite seu nome">
+                                <input id="nome" class="inputStyle w-full" type="text" name="nome" placeholder="Edite seu nome">
                             </div>
                         </div>
                         <div class="w-full flex items-center">
@@ -99,7 +121,7 @@
                                 <!--<label for="altSenha">Senha</label>
                                 <input id="altSenha" class="inputStyle w-full" type="password">-->
                                 <label for="senha">Modifique sua senha</label>
-                                <input id="senha" class="inputStyle w-full" type="password" placeholder="Nova senha">
+                                <input id="senha" class="inputStyle w-full" type="password" name="senha" placeholder="Nova senha">
                             </div>
                         </div>
                         <div class="w-full flex items-center">
@@ -107,11 +129,12 @@
                                 <!--<label for="altSenha">Senha</label>
                                 <input id="altSenha" class="inputStyle w-full" type="password">-->
                                 <label for="senha">Confirme a senha</label>
-                                <input id="senha" class="inputStyle w-full" type="password" placeholder="Confirme">
+                                <input id="senha" class="inputStyle w-full" type="password" name="confi_senha" placeholder="Confirme">
                             </div>
                         </div>
-                        <button class="button mt-3 text-base">Confirmar alterações</button>
+                        <button class="button mt-3 text-base" type="submit" name="confirmar">Confirmar alterações</button>
                     </div>
+                    </form>
                 </li>
                 <li class="profileItems">
                     <div class="flex justify-between w-full">
