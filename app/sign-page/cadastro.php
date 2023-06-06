@@ -165,6 +165,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                     <!--<input id="cadastrar" class="button w-full md:w-1/2 mb-2 md:mb-0" name="cadastrar" value="Cadastrar" type="submit">-->
                     <input class="button w-full md:w-1/2 mb-2 md:mb-0" type="submit" name="submit" value="Cadastrar">
                     <span id="aviso" class="invisible text-red-500 text-center">Preencha todos os campos!</span>
+                    <a class="block text-center mt-2 underline text-blue-400 hover:text-blue-800" href="login.php">Já possui uma conta?</a>
                 </div>
             </form>
         </section>

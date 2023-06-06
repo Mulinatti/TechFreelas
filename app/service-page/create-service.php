@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+    if ($_SESSION["usuario"]) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +22,7 @@
     <header class="header z-20">
         <div class="flex items-center">
             <button class="hidden mr-3" id="side-bar"><i class="fa-solid fa-bars text-xl"></i></button>
-            <a href="../main-page/index.html">
+            <a href="../main-page/index.php">
                 <figure class="items-center text-2xl hidden sm:flex">
                     <img class="w-14" src="../../src/imgs/logo.svg" alt="Logo Techfreelas">
                     <figcaption class="font-semibold hidden md:inline">TechFreelas</figcaption>
@@ -30,9 +35,12 @@
         </form>
         <div class="flex lg:w-1/6 justify-end lg:justify-between text-slate-400">
             <button class="lg:hidden p-2"><i class="fa-solid fa-ellipsis-vertical text-xl"></i></button>
-            <div class="text-base flex justify-between">
+            <!---<div class="text-base flex justify-between">
                 <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/login.php">Entrar</a>
                 <a class="px-2 hidden lg:inline hover:text-slate-100" href="../sign-page/cadastro.php">Cadastrar</a>
+            </div>-->
+            <div class="text-base flex justify-between">
+                <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/logout.php">Logout</a>
             </div>
             <a class="text-xl hidden lg:inline" href="#">
                 <i class="fa-solid fa-cart-shopping hover:text-slate-100"></i>
@@ -56,3 +64,8 @@
     </main>
 </body>
 </html>
+<?php
+    } else {
+        header("Location: ../main-page/index.php");
+    }
+?>

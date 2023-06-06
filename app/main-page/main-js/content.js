@@ -20,7 +20,7 @@ export const addContent = userData => {
         `
         <div class="box">
             <figure class="w-full">
-                <a class="cursor-pointer" href="../service-page/service-index.html">
+                <a class="cursor-pointer" href="../service-page/service-index.php">
                     <img class="w-full rounded-lg rounded-b-none" src="../../src/imgs/bannerservice.png" alt="">
                 </a>
             </figure>

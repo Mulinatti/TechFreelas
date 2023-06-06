@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,7 +21,7 @@
         <header class="header z-20">
             <div class="flex items-center">
                 <button class="lg:hidden mr-3" id="side-bar"><i class="fa-solid fa-bars text-xl"></i></button>
-                <a href="../main-page/index.html">
+                <a href="../main-page/index.php">
                     <figure class="items-center text-2xl hidden sm:flex">
                         <img class="w-14" src="../../src/imgs/logo.svg" alt="Logo Techfreelas">
                         <figcaption class="font-semibold hidden md:inline">TechFreelas</figcaption>
@@ -38,13 +42,21 @@
                         <li class="mb-2 py-1 px-2 hover:bg-slate-900"><a href="#">Perfil</a></li>
                     </ul>
                 </div>
-                <div class="text-base flex justify-between">
-                    <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/login.php">Entrar</a>
-                    <a class="px-2 hidden lg:inline hover:text-slate-100" href="../sign-page/cadastro.php">Cadastrar</a>
-                </div>
-                <a class="text-xl hidden lg:inline" href="../profile-page/profile-index.html">
-                    <i class="fa-solid fa-cart-shopping hover:text-slate-100"></i>
-                </a>
+                <?php if (!isset($_SESSION["usuario"])): ?>
+                    <div class="text-base flex justify-between">
+                        <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/login.php">Entrar</a>
+                        <a class="px-2 hidden lg:inline hover:text-slate-100" href="../sign-page/cadastro.php">Cadastrar</a>
+                    </div>
+                <?php else: ?>
+                    <div class="text-base flex justify-between">
+                        <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/logout.php">Logout</a>
+                    </div>
+                <?php endif; ?>
+                <?php if (isset($_SESSION["usuario"])): ?>
+                    <a class="text-xl hidden lg:inline" href="../profile-page/profile-index.php">
+                        <i class="fa-solid fa-cart-shopping hover:text-slate-100"></i>
+                    </a>
+                <?php endif; ?>
             </div>
         </header>
         <main class="main">
