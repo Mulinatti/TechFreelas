@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+    if($_SESSION["usuario"]) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,13 +35,16 @@
         </form>
         <div class="flex lg:w-1/6 justify-end lg:justify-between text-slate-400">
             <button class="lg:hidden p-2"><i class="fa-solid fa-ellipsis-vertical text-xl"></i></button>
-            <div class="text-base flex justify-between">
+            <!--<div class="text-base flex justify-between">
                 <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/login.php">Entrar</a>
                 <a class="px-2 hidden lg:inline hover:text-slate-100" href="../sign-page/cadastro.php">Cadastrar</a>
-            </div>
-            <a class="text-xl hidden lg:inline" href="#">
+            </div>-->
+            <!--<a class="text-xl hidden lg:inline" href="#">
                 <i class="fa-solid fa-cart-shopping hover:text-slate-100"></i>
-            </a>
+            </a>-->
+            <div class="text-base flex justify-between">
+                <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/logout.php">Logout</a>
+            </div>
         </div>
     </header>
     <main class="p-3">
@@ -44,7 +52,7 @@
             <div class="flex flex-row items-start">
                 <figure class="flex flex-row items-center justify-end">
                     <img class="rounded-full w-[80px] h-[80px] shadow-md" src="../../src/imgs/bannerservice.png" alt="anon">
-                    <figcaption class="text-2xl text-center w-full ml-4">Tommy Lipica</figcaption>
+                    <figcaption class="text-2xl text-center w-full ml-4"><?php echo $_SESSION["usuario"] ?></figcaption>
                 </figure>
             </div>
             <div class="flex flex-col justify-center items-center mt-5 md:flex-row sm:mt-0">
@@ -55,7 +63,7 @@
         </section>
         <section class="flex justify-center sm:justify-start mt-5">
             <div>
-                <button class="button"><a href="../service-page/create-service.html">Anunciar serviço</a></button>
+                <button class="button"><a href="../service-page/create-service.php">Anunciar serviço</a></button>
             </div>
         </section>
         <hr class="border-white/10 my-5">
@@ -133,3 +141,8 @@
         </footer>
         <script src="profile-js/profile.js" type="module"></script>
 </body>
+<?php
+    } else {
+        header("Location: ../main-page/index.php");
+    }
+?>

@@ -53,7 +53,7 @@
                     </div>
                 <?php endif; ?>
                 <?php if (isset($_SESSION["usuario"])): ?>
-                    <a class="text-xl hidden lg:inline" href="../profile-page/profile-index.html">
+                    <a class="text-xl hidden lg:inline" href="../profile-page/profile-index.php">
                         <i class="fa-solid fa-cart-shopping hover:text-slate-100"></i>
                     </a>
                 <?php endif; ?>
