@@ -80,20 +80,34 @@
                     <div class="hidden mt-4 dados w-full">
                         <div class="w-full flex items-center">
                             <div class="w-full md:w-3/5">
-                                <label for="email">E-Mail</label>
-                                <input id="email" class="inputStyle w-full" type="email" value="gabrielmulinari2002@gmail.com">
+                                <!--<label for="email">E-Mail</label>
+                                <input id="email" class="inputStyle w-full" type="email" value="gabrielmulinari2002@gmail.com">-->
+                                <label for="email">E-mail (<?php echo $_SESSION["email"] ?>)</label>
+                                <input id="email" class="inputStyle w-full" type="email" placeholder="Modifique seu e-mail">
                             </div>
                         </div>
                         <div class="w-full flex items-center">
                             <div class="w-full md:w-2/6">
-                                <label for="username">Username</label>
-                                <input id="usernameInput" class="inputStyle w-full" type="text">
+                                <!--<label for="username">Username</label>
+                                <input id="usernameInput" class="inputStyle w-full" type="text">-->
+                                <label for="nome">Seu nome (<?php echo $_SESSION["usuario"] ?>)</label>
+                                <input id="nome" class="inputStyle w-full" type="text" placeholder="Edite seu nome">
                             </div>
                         </div>
                         <div class="w-full flex items-center">
                             <div class="w-full md:w-2/6">
-                                <label for="altSenha">Senha</label>
-                                <input id="altSenha" class="inputStyle w-full" type="password">
+                                <!--<label for="altSenha">Senha</label>
+                                <input id="altSenha" class="inputStyle w-full" type="password">-->
+                                <label for="senha">Modifique sua senha</label>
+                                <input id="senha" class="inputStyle w-full" type="password" placeholder="Nova senha">
+                            </div>
+                        </div>
+                        <div class="w-full flex items-center">
+                            <div class="w-full md:w-2/6">
+                                <!--<label for="altSenha">Senha</label>
+                                <input id="altSenha" class="inputStyle w-full" type="password">-->
+                                <label for="senha">Confirme a senha</label>
+                                <input id="senha" class="inputStyle w-full" type="password" placeholder="Confirme">
                             </div>
                         </div>
                         <button class="button mt-3 text-base">Confirmar alterações</button>

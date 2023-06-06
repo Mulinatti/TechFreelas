@@ -22,11 +22,13 @@
                     if ($linha["Senha"] == $senha) {
                         $achou = true;
                         $nome = $linha["Nome"];
+                        $email = $linha["Email"];
                         break;
                     }
                 }
                 if ($achou) {
                     $_SESSION["usuario"] = $nome;
+                    $_SESSION["email"] = $email;
                     header("Location: ../main-page/index.php");
                 } else {
                     $mensagem = "Login ou senha inválido(s).";
