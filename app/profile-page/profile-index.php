@@ -203,7 +203,7 @@
                 <li>Gabriel de Paulo Mulinari</li>
                 <li>João Matheus Galvão de Oliveira</li>
                 <li>Breno Serra da Silva</li>
-                <li>Thiago</li>
+                <li>Thiago da Silva Lourenco</li>
             </ul>
             <p>Todos os direitos não reservados &nbsp;</p>
         </footer>
