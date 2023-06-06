@@ -99,7 +99,8 @@
         <section class="p-3 flex flex-col justify-center items-center sm:justify-between sm:flex-row">
             <div class="flex flex-row items-start">
                 <figure class="flex flex-row items-center justify-end">
-                    <img class="rounded-full w-[80px] h-[80px] shadow-md" src="../../src/imgs/bannerservice.png" alt="anon">
+                    <!--<img class="rounded-full w-[80px] h-[80px] shadow-md" src="../../src/imgs/bannerservice.png" alt="anon">-->
+                    <img class="rounded-full w-[80px] h-[80px] shadow-md" src="<?php echo '../../'.$_SESSION["foto"]; ?>" alt="Foto de perfil">
                     <figcaption class="text-2xl text-center w-full ml-4"><?php echo $_SESSION["usuario"] ?></figcaption>
                 </figure>
             </div>

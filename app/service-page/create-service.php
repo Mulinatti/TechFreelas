@@ -1,7 +1,40 @@
 <?php
+    include "app/db-php/db.php";
+
     session_start();
 
     if ($_SESSION["usuario"]) {
+        if (isset($_POST["enviar_foto"])) {
+            if (isset($_FILES["foto"]) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+                $folder_alvo = "database/profile-images/";
+                $nome_arquivo = uniqid() . '_' . $_FILES['foto']['name'];
+                $caminho = $folder_alvo . $nome_arquivo;
+
+                // Pegando o caminho da foto de perfil do banco de dados.
+                $query = $db->prepare("SELECT foto FROM Usuario WHERE User_ID = :id");
+                $query->bindValue(':id', $_SESSION["user_id"]);
+                $query->execute();
+                $previousImagePath = $query->fetchColumn();
+
+                // Deletando a foto anterior se existir.
+                if (!empty($previousImagePath)) {
+                    unlink($previousImagePath);
+                }
+                
+                $update = $db->prepare("UPDATE Usuario SET foto = :caminho_foto WHERE User_ID = :id");
+                $update->bindValue(':caminho_foto', $caminho);
+                $update->bindValue(':id', $_SESSION["user_id"]);
+                $update->execute();
+                if (move_uploaded_file($_FILES['foto']['tmp_name'], $caminho)) {
+                    echo "Foto registrada!";
+                    $_SESSION["foto"] = $caminho;
+                } else {
+                    echo "Algum erro aconteceu no upload da foto!";
+                }
+            } else {
+                echo "Nenhum upload de foto detectado!";
+            }
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,17 +75,20 @@
             <div class="text-base flex justify-between">
                 <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/logout.php">Logout</a>
             </div>
-            <a class="text-xl hidden lg:inline" href="#">
+            <a class="text-xl hidden lg:inline" href="../profile-page/profile-index.php">
                 <i class="fa-solid fa-cart-shopping hover:text-slate-100"></i>
             </a>
         </div>
     </header>
     <main>
-        <section>
+        <!--<section>
             <input type="file">
             <button class="button text-sm">Enviar</button>
-        </section>
-        <section class="text-black">
+        </section>-->
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data">
+            <label for="arquivo_imagem">Envie uma foto:</label> <br>
+            <input type="file" id="arquivo_imagem" name="foto"> <br>
+            <input class="button" type="submit" name="enviar_foto" value="Enviar foto"> <br>
             <select id="categorySelect" name="categoria">
                 <option value="Desenvolvedor">Desenvolvedor</option>
                 <option value="Artista">Artista</option>
@@ -60,7 +96,16 @@
                 <option value="Professor">Professor</option>
                 <option value="Audiovisual">Audiovisual</option>
             </select>
-        </section>
+        </form>
+        <!--<section class="text-black">
+            <select id="categorySelect" name="categoria">
+                <option value="Desenvolvedor">Desenvolvedor</option>
+                <option value="Artista">Artista</option>
+                <option value="Coach">Coach</option>
+                <option value="Professor">Professor</option>
+                <option value="Audiovisual">Audiovisual</option>
+            </select>
+        </section>-->
     </main>
 </body>
 </html>
