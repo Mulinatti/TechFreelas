@@ -1,5 +1,5 @@
 <?php
-include "C:\Developing\TechFreelas\TechFreelas\app\db-php\db.php";
+/*include "C:\Developing\TechFreelas\TechFreelas\app\db-php\db.php";
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     if (isset($_POST["submit"])) {
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             }
         }
     }
-}
+}*/
 ?>
 
 <!DOCTYPE html>

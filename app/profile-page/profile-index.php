@@ -1,9 +1,9 @@
 <?php
-    include "C:\Developing\TechFreelas\TechFreelas\app\db-php\db.php";
+    /*include "C:\Developing\TechFreelas\TechFreelas\app\db-php\db.php";
     session_start();
 
     // Condicionando a exibição dessa página
-    if($_SESSION["usuario"]) {
+    //if($_SESSION["usuario"]) {
         if (isset($_POST["confi_email"])) {
             $outro_email = isset($_POST["email"]) ? $_POST["email"] : '';
 
@@ -49,7 +49,7 @@
                     $mensagem = "As senhas não batem!";
                 }
             }
-        }
+        }*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -100,8 +100,8 @@
             <div class="flex flex-row items-start">
                 <figure class="flex flex-row items-center justify-end">
                     <!--<img class="rounded-full w-[80px] h-[80px] shadow-md" src="../../src/imgs/bannerservice.png" alt="anon">-->
-                    <img class="rounded-full w-[80px] h-[80px] shadow-md" src="<?php echo '../../'.$_SESSION["foto"]; ?>" alt="Foto de perfil">
-                    <figcaption class="text-2xl text-center w-full ml-4"><?php echo $_SESSION["usuario"] ?></figcaption>
+                    <img class="rounded-full w-[80px] h-[80px] shadow-md" src="<?php //echo '../../'.$_SESSION["foto"]; ?>" alt="Foto de perfil">
+                    <figcaption class="text-2xl text-center w-full ml-4"><?php //echo $_SESSION["usuario"] ?></figcaption>
                 </figure>
             </div>
             <div class="flex flex-col justify-center items-center mt-5 md:flex-row sm:mt-0">
@@ -132,7 +132,7 @@
                             <div class="w-full md:w-3/5">
                                 <!--<label for="email">E-Mail</label>
                                 <input id="email" class="inputStyle w-full" type="email" value="gabrielmulinari2002@gmail.com">-->
-                                <label for="email">E-mail (<?php echo $_SESSION["email"] ?>)</label>
+                                <label for="email">E-mail (<?php //echo $_SESSION["email"] ?>)</label>
                                 <input id="email" class="inputStyle w-full" type="email" name="email" placeholder="Modifique seu e-mail">
                                 <button class="button mt-3 text-base" type="submit" name="confi_email">Confirmar email</button>
                             </div>
@@ -141,7 +141,7 @@
                             <div class="w-full md:w-2/6">
                                 <!--<label for="username">Username</label>
                                 <input id="usernameInput" class="inputStyle w-full" type="text">-->
-                                <label for="nome">Seu nome (<?php echo $_SESSION["usuario"] ?>)</label>
+                                <label for="nome">Seu nome (<?php //echo $_SESSION["usuario"] ?>)</label>
                                 <input id="nome" class="inputStyle w-full" type="text" name="nome" placeholder="Edite seu nome">
                                 <button class="button mt-3 text-base" type="submit" name="confi_nome">Confirmar novo nome</button>
                             </div>
@@ -210,7 +210,7 @@
         <script src="profile-js/profile.js" type="module"></script>
 </body>
 <?php
-    } else {
-        header("Location: ../main-page/index.php");
-    }
+    //} else {
+     //   header("Location: ../main-page/index.php");
+    //}
 ?>
