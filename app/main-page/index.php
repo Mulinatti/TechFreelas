@@ -52,11 +52,11 @@
                         <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/logout.php">Logout</a>
                     </div>
                 <?php endif; ?>
-                <?php if (isset($_SESSION["usuario"])): ?>
+                <?php //if (isset($_SESSION["usuario"])): ?>
                     <a class="text-xl hidden lg:inline" href="../profile-page/profile-index.php">
                         <i class="fa-solid fa-user hover:text-slate-100"></i>
                     </a>
-                <?php endif; ?>
+                <?php //endif; ?>
             </div>
         </header>
         <main class="main">

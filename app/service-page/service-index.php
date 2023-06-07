@@ -94,7 +94,7 @@
                     <div class="flex flex-col lg:flex-row justify-between items-center">
                         <div class="flex flex-col items-center lg:flex-row w-full lg:w-auto text-center">
                             <a class="button mb-3 lg:mb-0 lg:mr-3 w-full lg:w-auto max-w-sm">Adicionar à lista</a>
-                            <a class="button w-full lg:w-auto max-w-sm">Contratar</a>
+                            <a class="button w-full lg:w-auto max-w-sm" href="../payment/payment.html">Contratar</a>
                         </div>
                         <p class="text-2xl font-semibold mt-4 lg:mt-0">R$ 23,57/h</p>
                     </div>
@@ -136,24 +136,24 @@
                 <div class="flex flex-col w-full items-start bg-slate-400/10 rounded-xl p-3 max-h-[152px]">
                     <div class="flex flex-row justify-around items-center">
                         <figure>
-                            <img class="rounded-2xl shadow-md w-10 h-10" src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                            <img class="rounded-2xl shadow-md w-10 h-10" src="https://img.freepik.com/fotos-premium/gato-fofo-de-olhos-grandes-gatinho-gato-fofo-fofo_303714-151.jpg" 
                             alt="Cachorrinho">
                         </figure>
-                        <p class="text-lg font-semibold pl-2">Cachorrinho</p>
+                        <p class="text-lg font-semibold pl-2">Gatinho</p>
                     </div>
-                    <p class="mt-4 text-slate-400 overflow-scroll overflow-x-hidden">Gostei muito, ele é muito educado e prestativo. Foi uma gameplay agradável!</p>
+                    <p class="mt-4 text-slate-400 overflow-scroll overflow-x-hidden">Muito educado!</p>
                 </div>
             </article>
             <article class="comentario">
                 <div class="flex flex-col w-full items-start bg-slate-400/10 rounded-xl p-3 max-h-[152px]">
                     <div class="flex flex-row justify-around items-center">
                         <figure>
-                            <img class="rounded-2xl shadow-md w-10 h-10" src="https://images.pexels.com/photos/2607544/pexels-photo-2607544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                            <img class="rounded-2xl shadow-md w-10 h-10" src="https://www.veracel.com.br/wp-content/uploads/2022/01/Veracel-Temporada-reprodutividade-de-tartaruga-Home.jpg" 
                             alt="Cachorrinho">
                         </figure>
-                        <p class="text-lg font-semibold pl-2">Cachorrinho</p>
+                        <p class="text-lg font-semibold pl-2">Tartaruguinha</p>
                     </div>
-                    <p class="mt-4 text-slate-400 overflow-scroll overflow-x-hidden">Gostei muito, ele é muito educado e prestativo. Foi uma gameplay agradável!</p>
+                    <p class="mt-4 text-slate-400 overflow-scroll overflow-x-hidden">Só jogadas boas!</p>
                 </div>
             </article>
         </section>

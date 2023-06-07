@@ -1,5 +1,5 @@
 <?php
-    include "C:\Developing\TechFreelas\TechFreelas\app\db-php\db.php";
+    /*include "C:\Developing\TechFreelas\TechFreelas\app\db-php\db.php";
     if (!$db) {
         die("Erro na conexão com o banco de dados.");
     }
@@ -42,7 +42,7 @@
                 }
             }
         }
-    }
+    }*/
 ?>
 
 <!DOCTYPE html>
