@@ -4,7 +4,11 @@
     session_start();
 
     if ($_SESSION["usuario"]) {
-        if (isset($_POST["enviar_foto"])) {
+        if (isset($_POST["Salvar Serviço"])) {
+            $nome = $_SESSION["usuario"];
+            $categoria = $_POST["categoria"];
+            $preco = $_POST["preco"];
+
             if (isset($_FILES["foto"]) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
                 $folder_alvo = "database/profile-images/";
                 $nome_arquivo = uniqid() . '_' . $_FILES['foto']['name'];
@@ -34,6 +38,18 @@
             } else {
                 echo "Nenhum upload de foto detectado!";
             }
+            // ----------- Categoria -----------
+            $select_categoria = $db->prepare("SELECT * FROM Categoria WHERE Categoria_Name = $categoria");
+            $select_categoria->execute();
+            $categoria_id = $select_categoria->fetchColumn();
+            // ---------------------------------
+            $insert_service = $db->prepare("INSERT INTO Service (User_ID, Preco, Service_IMG, Categoria_ID)
+                                            VALUES (:user_id, :preco, :service_img, :categoria_id)");
+            $insert_service->bindValue(':user_id', $_SESSION["user_id"]);
+            $insert_service->bindValue(':preco', $preco);
+            $insert_service->bindValue(':service_img', $foto);
+            $insert_service->bindValue(':categoria_id', $categoria_id);
+            $insert_service->execute();
         }
 ?>
 <!DOCTYPE html>
@@ -85,17 +101,21 @@
             <input type="file">
             <button class="button text-sm">Enviar</button>
         </section>-->
+        <p>Nome: <?php echo $_SESSION["usuario"]; ?></p>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" enctype="multipart/form-data">
             <label for="arquivo_imagem">Envie uma foto:</label> <br>
             <input type="file" id="arquivo_imagem" name="foto"> <br>
-            <input class="button" type="submit" name="enviar_foto" value="Enviar foto"> <br>
             <select id="categorySelect" name="categoria">
+                <option value=""></option>
                 <option value="Desenvolvedor">Desenvolvedor</option>
                 <option value="Artista">Artista</option>
                 <option value="Coach">Coach</option>
                 <option value="Professor">Professor</option>
                 <option value="Audiovisual">Audiovisual</option>
             </select>
+            <label for="preco">O preço do serviço:</label> <br>
+            <input type="number" name="preco">
+            <input class="button" type="submit" name="enviar" value="Salvar Serviço"> <br>
         </form>
         <!--<section class="text-black">
             <select id="categorySelect" name="categoria">
