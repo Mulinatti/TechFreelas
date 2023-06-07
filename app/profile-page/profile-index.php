@@ -100,8 +100,8 @@
             <div class="flex flex-row items-start">
                 <figure class="flex flex-row items-center justify-end">
                     <!--<img class="rounded-full w-[80px] h-[80px] shadow-md" src="../../src/imgs/bannerservice.png" alt="anon">-->
-                    <img class="rounded-full w-[80px] h-[80px] shadow-md" src="<?php //echo '../../'.$_SESSION["foto"]; ?>" alt="Foto de perfil">
-                    <figcaption class="text-2xl text-center w-full ml-4"><?php //echo $_SESSION["usuario"] ?></figcaption>
+                    <img class="rounded-full w-[80px] h-[80px] shadow-md" src="https://conteudo.imguol.com.br/c/noticias/8c/2022/11/22/02mai2022---o-bilionario-elon-musk-no-met-gala-em-nova-york-1669125518979_v2_1x1.jpg<?php //echo '../../'.$_SESSION["foto"]; ?>" alt="Foto de perfil">
+                    <figcaption class="text-2xl text-center w-full ml-4">Elon Musk<?php //echo $_SESSION["usuario"] ?></figcaption>
                 </figure>
             </div>
             <div class="flex flex-col justify-center items-center mt-5 md:flex-row sm:mt-0">
