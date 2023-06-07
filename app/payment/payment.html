@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+    if($_SESSION["usuario"]) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +16,10 @@
   <link rel="stylesheet" href="../../src/scroll.css">
   <link rel="stylesheet" href="../tailwindCSS/tailwind.css">
   <title>Página de Pagamento</title>
-  <style>
-    *{
-      margin:0;
-      box-sizing: border-box;
-      padding:0;
-   }
-		
+  <style>	
     section.perfil{
       display: flex;
-      max-width: 1000px;
+      max-width: 960px;
       justify-content: space-around;
       padding:0 2%;
       flex-wrap: wrap;
@@ -31,7 +30,7 @@
       -webkit-box-shadow:-8px 5px 15px 5px #C7C7C7;
       box-shadow: -8px 5px 15px 5px #C7C7C7;
       padding:30px 30px 80px 30px;
-      width: 60%;
+      width: 90%;
     }
     .form-pagamento form{
       display: flex;
@@ -42,7 +41,7 @@
 
     .form-pagamento label{
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 9px;
       font-weight: bold;
       color: rgb(140, 140, 140);
     }
@@ -61,7 +60,6 @@
       color: white;
     }
     @media screen and (max-width:768px) {
-      .perfil-profissional,
       .form-pagamento{
         width:100%;
         margin-bottom: 10px;
@@ -95,8 +93,8 @@
                 </ul>
             </div>
             <div class="text-base flex justify-between">
-                <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/login.php">Entrar</a>
-                <a class="px-2 hidden lg:inline hover:text-slate-100" href="../sign-page/cadastro.php">Cadastrar</a>
+                <a class="border-r hidden lg:inline border-slate-400/10 hover:text-slate-100 px-2" href="../sign-page/login.html">Entrar</a>
+                <a class="px-2 hidden lg:inline hover:text-slate-100" href="../sign-page/cadastro.html">Cadastrar</a>
             </div>
             <a class="text-xl hidden lg:inline" href="../profile-page/profile-index.html">
                 <i class="fa-solid fa-cart-shopping hover:text-slate-100"></i>
@@ -104,10 +102,29 @@
         </div>
     </header>
     
-  <section class="perfil flex max-w-1000 justify-around px-2 py-0 flex-wrap mx-auto mt-75">
-    <div class="perfil w-40"></div>
-    <h1 class="text-5xl">R$ 150,00/D</h1> 
+  <section class="perfil p-4 lg:p-8">
+    <div class="w-full lg:w-[45%] flex justify-center items-center">
+      <figure>
+          <img class="rounded-2xl shadow-md" src="../../src/imgs/bannerservice.png" alt="">
+      </figure>
+    </div>
+    <div class="w-full lg:w-[45%] flex flex-col rounded-2xl flex-shrink">
+      <div>
+          <div class="flex flex-col lg:flex-row justify-between items-center mt-3 lg:mt-0">
+              <p class="text-3xl font-bold w-full lg:w-3/4">Tommy Lipica</p>
+              <p class="text-blue-600 text-lg font-semibold w-full lg:w-1/3 lg:text-end">Desenvolvedor</p>
+          </div>
+          <p class="mt-4 text-slate-400 overflow-scroll overflow-x-hidden h-[156px] overscroll-y-none">
+            Waodsosams skam skdalskmk odksaml lskml sdl cae skm oam oo wondsklnskdnlaskn aodiqowiksndknk saoojw.
+            slkjdaosjdoiwjo ijsmadl maskldmsldkm oqdjpomdlasmdlm lowopkdposakdposkapd dsoadjoi jcabdsdskj padksopk cabeçada no teclado.</p>
+         
+      </div>
+      <div class="flex flex-col lg:flex-row justify-between items-center">
+          <div class="flex flex-col items-center lg:flex-row w-full lg:w-auto text-center"></div>
+          <p class="text-3xl font-semibold mt-4 lg:mt-0">R$ 23,57/h</p>
+      </div>
   </div>
+  <hr class="border-white/10 my-5">
        <div class="form-pagamento">
          <form method="POST">
            <div class="form-100">
@@ -119,7 +136,7 @@
          <input type="text" placeholder="1234 1234 1234 1234" />
          <div class="form-50">
            <input style="margin-top:-3px;" type="text" placeholder="12/23" />
-           <input style="margin-left: -1px; margin-top: -1px;" type="text" placeholder="CVC" />
+           <input style="margin-left: -3px; margin-top: -3px;" type="text" placeholder="CVC" />
          </div>
        </div>
        <div class="form-100">
@@ -129,7 +146,21 @@
           <input type="submit" name="acao" value="Pagar!" />
         </form>
       </div>
-    </section>
+      </section>
+      <section class="perfil p-4 lg:p-8">
+      <div class="w-full lg:w-[45%] flex justify-center items-center">
+        <hr class="border-white/10 my-5">
+        <div class="form-pagamento">
+          <form method="POST">
+            <div class="form-65">
+              <label>Ou Por Pix Via QRCODE</label>
+              <figure>
+                <img class="rounded-2xl shadow-md" src="https://img.freepik.com/vetores-premium/codigo-qr-digitalize-o-codigo-qrcode-do-produto-abstrato-conceito-de-pagamento-de-codigo-de-barras-vetorial-para-loja-movel_152104-750.jpg?w=2000" alt="">
+            </figure>
+         </div>
+       </div>
+      </div>
+     </section>
     <footer class="bg-black/60 text-center py-5">
       <ul class="h-32 flex flex-col justify-between text-slate-500 mb-5">
           <li>Gabriel de Paulo Mulinari</li>
