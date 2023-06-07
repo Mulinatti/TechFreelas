@@ -112,7 +112,7 @@
         </section>
         <section class="flex justify-center sm:justify-start mt-5">
             <div>
-                <button class="button"><a href="../service-page/create-service.php">Anunciar serviço</a></button>
+                <!--<button class="button"><a href="../service-page/create-service.php">Anunciar serviço</a></button>-->
             </div>
         </section>
         <hr class="border-white/10 my-5">
