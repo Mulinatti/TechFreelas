@@ -4,7 +4,34 @@
     session_start();
 
     if ($_SESSION["usuario"]) {
-        if (isset($_POST["Salvar Serviço"])) {
+        if (isset($_POST["enviar"])) {
+            $nome = $_SESSION["usuario"];
+            $categoria = $_POST["categoria"];
+            $preco = $_POST["preco"];
+
+            if (isset($_FILES["foto"]) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
+                $folder_alvo = "C:\Developing\TechFreelas\TechFreelas\database\profile-images";
+                $nome_arquivo = uniqid() . '_' . $_FILES['foto']['name'];
+                $caminho_foto = $folder_alvo . $nome_arquivo;
+                // Categoria
+                $select = $db->prepare("SELECT * FROM Categoria WHERE Categoria_Name = :categoria");
+                $select->bindValue(':categoria', $categoria);
+                $select->execute();
+                $categoria_id = $select->fetchColumn();
+                // ---------
+                if (move_uploaded_file($_FILES['foto']['tmp_name'], $caminho_foto)) {
+                    $insert = $db->prepare("INSERT INTO Service (User_ID, Preco, Service_IMG, Categoria_ID)
+                                            VALUES (:user_id, :preco, :service_img, :categoria_id)");
+                    $insert->bindValue(':user_id', $_SESSION["user_id"]);
+                    $insert->bindValue(':preco', $preco);
+                    $insert->bindValue(':service_img', $caminho_foto);
+                    $insert->bindValue(':categoria_id', $categoria_id);
+                    $insert->execute();
+                    echo "Serviço salvo!";
+                }
+            }
+        }
+        /*if (isset($_POST["Salvar Serviço"])) {
             $nome = $_SESSION["usuario"];
             $categoria = $_POST["categoria"];
             $preco = $_POST["preco"];
@@ -12,9 +39,9 @@
             if (isset($_FILES["foto"]) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
                 $folder_alvo = "database/profile-images/";
                 $nome_arquivo = uniqid() . '_' . $_FILES['foto']['name'];
-                $caminho = $folder_alvo . $nome_arquivo;
+                $caminho_foto = $folder_alvo . $nome_arquivo;
 
-                // Pegando o caminho da foto de perfil do banco de dados.
+                // Pegando o caminho da foto do serviço do banco de dados.
                 $query = $db->prepare("SELECT foto FROM Usuario WHERE User_ID = :id");
                 $query->bindValue(':id', $_SESSION["user_id"]);
                 $query->execute();
@@ -26,12 +53,12 @@
                 }
                 
                 $update = $db->prepare("UPDATE Usuario SET foto = :caminho_foto WHERE User_ID = :id");
-                $update->bindValue(':caminho_foto', $caminho);
+                $update->bindValue(':caminho_foto', $caminho_foto);
                 $update->bindValue(':id', $_SESSION["user_id"]);
                 $update->execute();
-                if (move_uploaded_file($_FILES['foto']['tmp_name'], $caminho)) {
+                if (move_uploaded_file($_FILES['foto']['tmp_name'], $caminho_foto)) {
                     echo "Foto registrada!";
-                    $_SESSION["foto"] = $caminho;
+                    $_SESSION["foto"] = $caminho_foto;
                 } else {
                     echo "Algum erro aconteceu no upload da foto!";
                 }
@@ -47,10 +74,9 @@
                                             VALUES (:user_id, :preco, :service_img, :categoria_id)");
             $insert_service->bindValue(':user_id', $_SESSION["user_id"]);
             $insert_service->bindValue(':preco', $preco);
-            $insert_service->bindValue(':service_img', $foto);
+            $insert_service->bindValue(':service_img', $caminho_foto);
             $insert_service->bindValue(':categoria_id', $categoria_id);
-            $insert_service->execute();
-        }
+            $insert_service->execute();*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
