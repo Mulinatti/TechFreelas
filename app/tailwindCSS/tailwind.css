@@ -721,6 +721,8 @@ video {
 .inputStyle {
   margin-bottom: 0.75rem;
   border-radius: 0.5rem;
+  border-width: 1px;
+  border-color: rgb(37 99 235 / 0.5);
   background-color: rgb(9 14 32 / 0.9);
   padding: 0.5rem;
   font-size: 1.125rem;

@@ -1,4 +1,4 @@
-const btnCadastro = document.getElementById("cadastrar")
+const btnCadastro = document.querySelector(".btnCadastro")
 const inputs = document.querySelectorAll(".inputStyle");
 const aviso = document.getElementById("aviso");
 
