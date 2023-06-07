@@ -1,6 +1,6 @@
 <?php
     // Conectando ao banco de dados SQLite
-    $db = new PDO("sqlite:database/database.sqlite");
+    $db = new PDO("sqlite:../../database/database.sqlite");
     
     // Configurando as tabelas
     $tabela_usuario = "CREATE TABLE IF NOT EXISTS Usuario (

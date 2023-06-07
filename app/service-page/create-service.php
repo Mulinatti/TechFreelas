@@ -1,5 +1,5 @@
 <?php
-    include "app/db-php/db.php";
+    include "C:\Developing\TechFreelas\TechFreelas\app\db-php\db.php";
 
     session_start();
 

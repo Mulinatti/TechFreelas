@@ -1,12 +1,15 @@
 <?php
-    include "app/db-php/db.php";
+    include "C:\Developing\TechFreelas\TechFreelas\app\db-php\db.php";
+    if (!$db) {
+        die("Erro na conexão com o banco de dados.");
+    }
     session_start();
+
     if ($_SERVER['REQUEST_METHOD'] === "POST") {
         if (isset($_POST["entrar"])) {
             // Assegurando se os campos foram preeenchidos...
             $login = isset($_POST["login"]) ? $_POST["login"] : '';
             $senha = isset($_POST["senha"]) ? $_POST["senha"] : '';
-            $mensagem = '';
             $nome = '';
 
             if (empty($login) || empty($senha)) {
@@ -70,17 +73,15 @@
             <form class="flex item-center justify-center flex-col"
                   action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
                 <div class="flex flex-col">
-                    <label for="login">E-Mail ou CPF</label>
-                    <input id="login" class="bg-rich outline-none text-lg p-2 border border-blue-600/40 rounded-lg" type="text" name="login" required>
+                    <label for="login">E-Mail</label>
+                    <input id="login" class="bg-rich loginInput outline-none text-lg p-2 border border-blue-600/40 rounded-lg" type="text" name="login">
                 </div>
                 <div class="flex flex-col">
                     <label for="password">Senha</label>
-                    <input id="password" class="bg-rich outline-none text-lg p-2 border border-blue-600/40 rounded-lg" type="password" name="senha" required>
+                    <input id="password" class="bg-rich loginInput outline-none text-lg p-2 border border-blue-600/40 rounded-lg" type="password" name="senha">
                 </div>
-                <?php
-                    echo '<p>'.$mensagem.'</p>';
-                ?>
-                <button class="button w-full mt-5" type="submit" name="entrar">Entrar</button>
+                <span id="erroLogin" class="text-center invisible text-red-500">Preencha todos os campos</span>
+                <button id="btnLogin" class="button w-full mt-5" type="submit" name="entrar">Entrar</button>
                 <div class="mt-7 h-28 flex flex-col justify-around">
                     <a class="flex items-center justify-center bg-slate-300 text-black font-semibold button hover:bg-gray-400" href="#"><i class="fa-brands fa-google text-red-600 mr-3"></i><p>Entrar com Google</p></a>
                     <a class="flex items-center justify-center bg-slate-300 text-black font-semibold button hover:bg-gray-400" href="#"><i class="fa-brands fa-square-facebook text-blue-600 mr-3"></i><p>Entrar com Facebook</p></a>
@@ -89,5 +90,6 @@
             </form>
         </fieldset>
     </main>
+    <script type="module" src="login-js/validacaoLogin.js"></script>
 </body>
 </html>

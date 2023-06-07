@@ -1,5 +1,5 @@
 <?php
-    include "app/db-php/db.php";
+    include "C:\Developing\TechFreelas\TechFreelas\app\db-php\db.php";
     session_start();
 
     // Condicionando a exibição dessa página
@@ -164,7 +164,6 @@
                             </div>
                         </div>
                         <!--<button class="button mt-3 text-base" type="submit" name="confirmar">Confirmar alterações</button>-->
-                        <?php echo '<p>'.$mensagem.'</p>' ?>
                     </div>
                     </form>
                 </li>

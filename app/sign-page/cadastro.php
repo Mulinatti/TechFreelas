@@ -1,5 +1,5 @@
 <?php
-include "app/db-php/db.php";
+include "C:\Developing\TechFreelas\TechFreelas\app\db-php\db.php";
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     if (isset($_POST["submit"])) {
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
         if (empty($nome_completo) || empty($cpf) || empty($data_nascimento) || empty($email) || empty($senha) ||
          empty($cep) || empty($rua) || empty($numero_rua) || empty($bairro) || empty($cidade) || empty($uf)) {
-            $mensagem = "Todos os campos precisam ser preenchidos!";
+            echo "Todos os campos precisam ser preenchidos!";
         } else {
             // Checando se há registro
             $achou = false;
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                 }
             }
             if($achou) {
-                $mensagem = "O usuário já está cadastrado!";
+                echo "O usuário já está cadastrado!";
             } else {
                 // Calculando a idade do novo usuário
                 $data_atual = date('Y-m-d');
@@ -96,9 +96,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 <body class="bodyPattern">
     <main class="p-5">
         <h1 class="text-center font-bold text-3xl mb-4">Cadastro</h1>
-        <?php
-            echo '<p>'.$mensagem.'</p>';
-        ?>
         <section>
             <form class="flexCol md:max-w-xl" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
                 <section class="md:grid md:grid-cols-2 mb-5">
@@ -165,8 +162,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                     <!--<input id="cadastrar" class="button w-full md:w-1/2 mb-2 md:mb-0" name="cadastrar" value="Cadastrar" type="submit">-->
                     <input class="button btnCadastro w-full md:w-1/2 mb-2 md:mb-0" type="submit" name="submit" value="Cadastrar">
                     <span id="aviso" class="invisible text-red-500 text-center">Preencha todos os campos!</span>
-                    <a class="block text-center mt-2 underline text-blue-400 hover:text-blue-800" href="login.php">Já possui uma conta?</a>
                 </div>
+                <a class="block mt-2 underline text-blue-400 hover:text-blue-800" href="login.php">Já possui uma conta?</a>
             </form>
         </section>
     </main>
